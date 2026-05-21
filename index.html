@@ -60,6 +60,7 @@
             mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
         }
 
+        /* ==================== BOTÕES FIXOS ==================== */
         .btn-whatsapp {
             position: fixed;
             width: 60px;
@@ -78,7 +79,6 @@
         .fa-whatsapp {
             margin-top: 16px;
         }
-
 
         .btn-voltar {
             position: fixed;
@@ -106,6 +106,7 @@
             box-shadow: 0 0 20px rgba(197, 160, 89, 0.5);
         }
 
+        /* ==================== TRILHAS ==================== */
         #trilha1,
         #trilha2,
         #trilha3,
@@ -115,7 +116,7 @@
             padding-bottom: 100px !important;
         }
 
-        /* Transição suave entre sections */
+        /* ==================== TRANSIÇÕES ENTRE SECTIONS ==================== */
         section {
             position: relative;
         }
@@ -144,13 +145,12 @@
             z-index: 5;
         }
 
-        /* Remover nos primeiros e últimos */
         section:first-of-type::before,
         section:last-of-type::after {
             display: none;
         }
 
-        /* Brilho dourado ao passar o mouse */
+        /* ==================== EFEITOS VISUAIS ==================== */
         .img-glow-container {
             position: relative;
             overflow: visible;
@@ -180,7 +180,7 @@
             transform: scale(1.02);
         }
 
-        /* Esconder scrollbar mas manter funcionalidade */
+        /* ==================== CARROSSEL ==================== */
         .scrollbar-hide::-webkit-scrollbar {
             display: none;
         }
@@ -190,26 +190,646 @@
             scrollbar-width: none;
         }
 
-        /* Animação suave dos cards */
         .testimonial-card {
             transition: transform 0.3s ease;
+            scroll-snap-align: center;
+            scroll-snap-stop: normal;
         }
 
         .testimonial-card:hover {
             transform: translateY(-10px);
         }
 
-        /* Transição suave no carrossel */
         #testimonialCarousel {
             scroll-behavior: smooth;
             transition: scroll 0.3s ease-out;
         }
 
-        /* Suavizar o scroll snap */
-        .testimonial-card {
-            scroll-snap-align: center;
-            scroll-snap-stop: normal;
-            /* Permite passar múltiplos cards */
+        /* ==================== MENU MOBILE ==================== */
+        #mobileMenuOverlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #mobileMenu.active {
+            transform: translateX(0);
+        }
+
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        #mobileMenu a {
+            transition: all 0.3s ease;
+        }
+
+        #mobileMenu a:hover {
+            transform: translateX(4px);
+        }
+
+        #mobileMenuBtn {
+            transition: transform 0.2s ease;
+        }
+
+        #mobileMenuBtn:active {
+            transform: scale(0.9);
+        }
+
+        /* ==================== RESPONSIVIDADE MOBILE (max-width: 768px) ==================== */
+        @media (max-width: 768px) {
+
+            /* ===== TIPOGRAFIA ===== */
+            .font-display-lg {
+                font-size: 32px !important;
+                line-height: 38px !important;
+            }
+
+            .font-headline-lg {
+                font-size: 24px !important;
+                line-height: 30px !important;
+            }
+
+            .font-headline-lg-mobile {
+                font-size: 28px !important;
+                line-height: 34px !important;
+            }
+
+            .font-headline-md {
+                font-size: 20px !important;
+                line-height: 26px !important;
+            }
+
+            .font-body-lg {
+                font-size: 16px !important;
+                line-height: 24px !important;
+            }
+
+            /* ===== ESPAÇAMENTOS GERAIS ===== */
+            .py-section-gap {
+                padding-top: 60px !important;
+                padding-bottom: 60px !important;
+            }
+
+            .px-container-padding {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            .gap-gutter {
+                gap: 20px !important;
+            }
+
+            /* ===== HERO SECTION ===== */
+            section.min-h-\[90vh\] {
+                min-height: 70vh !important;
+                padding-top: 155px !important;
+            }
+
+            section.min-h-\[90vh\] .py-section-gap {
+                padding-top: 40px !important;
+                padding-bottom: 40px !important;
+            }
+
+            section.min-h-\[90vh\] .max-w-3xl {
+                max-width: 100% !important;
+                padding: 0 20px;
+            }
+
+            section.min-h-\[90vh\] .font-label-caps {
+                font-size: 10px !important;
+                margin-bottom: 16px !important;
+            }
+
+            section.min-h-\[90vh\] .font-display-lg {
+                font-size: 28px !important;
+                line-height: 34px !important;
+                margin-bottom: 20px !important;
+            }
+
+            section.min-h-\[90vh\] .font-body-lg {
+                font-size: 14px !important;
+                line-height: 22px !important;
+                margin-bottom: 24px !important;
+            }
+
+            section.min-h-\[90vh\] .px-10 {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            section.min-h-\[90vh\] .py-5 {
+                padding-top: 12px !important;
+                padding-bottom: 12px !important;
+            }
+
+            /* ===== GRID - 1 COLUNA ===== */
+            .grid-cols-1.md\:grid-cols-3,
+            .grid-cols-1.md\:grid-cols-4,
+            .grid-cols-1.md\:grid-cols-5 {
+                grid-template-columns: 1fr !important;
+            }
+
+            /* ===== PROGRAMA SECTION ===== */
+            #programa .scale-105 {
+                transform: scale(1) !important;
+                box-shadow: none !important;
+            }
+
+            /* ===== TRILHAS SECTION ===== */
+            #trilhas .mb-20 {
+                margin-bottom: 30px !important;
+            }
+
+            #trilhas .grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 16px !important;
+            }
+
+            #trilhas .aspect-\[3\/4\] {
+                aspect-ratio: 3/4 !important;
+                max-height: 280px !important;
+            }
+
+            #trilhas .mt-8,
+            #trilhas .md\:mt-12 {
+                margin-top: 0 !important;
+            }
+
+            #trilhas .px-8 {
+                padding-left: 12px !important;
+                padding-right: 12px !important;
+            }
+
+            #trilhas .py-3 {
+                padding-top: 8px !important;
+                padding-bottom: 8px !important;
+            }
+
+            #trilhas .font-headline-md {
+                font-size: 14px !important;
+                line-height: 18px !important;
+            }
+
+            #trilhas .text-xs.opacity-0 {
+                display: none !important;
+            }
+
+            #trilhas .p-6 {
+                padding: 12px !important;
+            }
+
+            #trilhas .grid>a:last-child {
+                grid-column: span 2;
+                max-width: 50%;
+                margin: 0 auto;
+            }
+
+            /* ===== CARDS ===== */
+            .p-10 {
+                padding: 24px !important;
+            }
+
+            /* ===== BOTÕES ===== */
+            .px-10 {
+                padding-left: 24px !important;
+                padding-right: 24px !important;
+            }
+
+            .py-5 {
+                padding-top: 16px !important;
+                padding-bottom: 16px !important;
+            }
+
+            /* ===== FLEX ===== */
+            .flex-col.sm\:flex-row {
+                flex-direction: column !important;
+            }
+
+            /* ===== IMAGENS ===== */
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            /* Imagens coloridas mas ainda com zoom no hover */
+            #trilhas .grayscale {
+                filter: grayscale(0%) !important;
+            }
+
+            #trilhas img {
+                filter: grayscale(0%) !important;
+                transform: scale(1) !important;
+                /* Tamanho normal */
+                transition: transform 0.3s ease !important;
+            }
+
+            /* Zoom ao clicar/tocar */
+            #trilhas a:active img {
+                transform: scale(1.05) !important;
+            }
+
+            /* ===== DEPOIMENTOS ===== */
+            .testimonial-card {
+                min-width: 280px !important;
+            }
+
+            #testimonialCarousel {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            /* ===== MODAIS ===== */
+            .max-w-xl,
+            .max-w-2xl,
+            .max-w-3xl,
+            .max-w-5xl {
+                max-width: 95vw !important;
+            }
+
+            .aspect-\[9\/16\] {
+                max-height: 75vh !important;
+            }
+
+            .absolute.-top-16 {
+                top: -60px !important;
+            }
+
+            /* ===== NAVBAR ===== */
+            nav .h-20 {
+                height: 70px !important;
+            }
+
+            nav a.bg-primary-container {
+                padding: 5px 10px !important;
+                font-size: 8px !important;
+            }
+
+            /* ===== BOTÕES FIXOS ===== */
+            .btn-whatsapp {
+                width: 50px !important;
+                height: 50px !important;
+                bottom: 20px !important;
+                right: 20px !important;
+                font-size: 24px !important;
+            }
+
+            /* ===== ÍCONES ===== */
+            .text-5xl {
+                font-size: 40px !important;
+            }
+
+            .text-6xl {
+                font-size: 48px !important;
+            }
+
+            /* ----- TRILHA 1 MOBILE ----- */
+            #trilha1 {
+                padding-top: 40px !important;
+                padding-bottom: 60px !important;
+            }
+
+            #trilha1 span {
+                text-align: center;
+                display: block;
+                /* Importante! Span é inline por padrão */
+            }
+
+            #trilha1 h2 {
+                text-align: center;
+                display: block;
+                /* Importante! Span é inline por padrão */
+            }
+
+            #trilha1 p {
+                text-align: center;
+                display: block;
+                /* Importante! Span é inline por padrão */
+            }
+
+            /* Reorganizar layout: texto em cima, imagem embaixo */
+            #trilha1 .flex.flex-col.lg\:flex-row {
+                flex-direction: column !important;
+            }
+
+            /* Texto primeiro */
+            #trilha1 .w-full.lg\:w-1\/2:first-child {
+                order: 1;
+                margin-bottom: 32px;
+            }
+
+            /* Imagem por último */
+            #trilha1 .w-full.lg\:w-1\/2:last-child {
+                order: 2;
+                position: relative;
+                z-index: 1;
+                /* Garante que fica por baixo */
+            }
+
+            /* Ajustar container da imagem */
+            #trilha1 .relative.flex {
+                margin-top: 32px;
+                max-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            /* Lista de itens com z-index maior */
+            #trilha1 .space-y-8 {
+                position: relative;
+                z-index: 10;
+                /* Texto por cima */
+            }
+
+            /* Reduzir espaçamento entre itens */
+            #trilha1 .space-y-8>div {
+                margin-bottom: 16px !important;
+            }
+
+            #trilha1 .space-y-8 {
+                gap: 16px !important;
+            }
+
+            #trilha1 .flex-col.lg\:flex-row {
+                flex-direction: column !important;
+            }
+
+            /* ----- TRILHA 2 MOBILE ----- */
+            #trilha2 {
+                padding-bottom: 60px !important;
+            }
+
+            #trilha2 .grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+
+            #trilha2 .p-10 {
+                padding: 20px !important;
+            }
+
+            /* ----- TRILHA 3 MOBILE ----- */
+
+            #trilha3 span {
+                text-align: center;
+                display: block;
+                /* Importante! Span é inline por padrão */
+            }
+
+            #trilha3 h2 {
+                text-align: center;
+                display: block;
+                /* Importante! Span é inline por padrão */
+            }
+
+            #trilha3 .relative.z-20 {
+                margin-bottom: 2rem !important;
+            }
+
+            #trilha3 p.mb-12 {
+                text-align: center !important;
+            }
+
+            #trilha3 .w-full.lg\:w-1\/2.relative {
+                display: none !important;
+            }
+
+            #trilha3 {
+                padding-bottom: 60px !important;
+            }
+
+            #trilha3 .flex-col.lg\:flex-row {
+                flex-direction: column !important;
+            }
+
+            #trilha3 .w-80,
+            #trilha3 .md\:w-\[500px\] {
+                width: 280px !important;
+                height: 280px !important;
+            }
+
+            /* ----- TRILHA 4 MOBILE ----- */
+
+            #trilha4 .max-w-lg.relative {
+                display: none !important;
+            }
+
+            #trilha4 .flex.justify-center.mb-12 {
+                margin-bottom: 0px !important;
+            }
+
+            #trilha4 h2 {
+                text-align: center;
+                display: block;
+            }
+
+            #trilha4 p {
+                text-align: center;
+                display: block;
+            }
+
+            #trilha4 .font-label-caps {
+                text-align: center !important;
+            }
+
+            #trilha4 {
+                padding-bottom: 60px !important;
+            }
+
+            #trilha4 .flex-col.md\:flex-row {
+                flex-direction: column !important;
+            }
+
+            #trilha4 img {
+                max-width: 100% !important;
+            }
+
+            /* ----- TRILHA 5 MOBILE ----- */
+
+            #trilha5 .flex.justify-center {
+                margin-bottom: 30px !important;
+            }
+
+            #trilha5 h2 {
+                text-align: center;
+                display: block;
+            }
+
+            #trilha5 h3 {
+                text-align: center;
+                display: block;
+            }
+
+            #trilha5 p {
+                text-align: center;
+                display: block;
+            }
+
+            #trilha5 .w-full.h-auto.border-none {
+                display: none !important;
+            }
+
+            #trilha5 .flex.justify-end {
+                justify-content: center !important;
+            }
+
+
+            #trilha5 {
+                padding-bottom: 60px !important;
+            }
+
+            #trilha5 .md\:col-span-4 {
+                grid-column: span 1 !important;
+            }
+
+            #trilha5 .md\:col-span-8 {
+                grid-column: span 1 !important;
+            }
+
+            #trilha5 .sticky {
+                position: relative !important;
+                top: auto !important;
+            }
+
+            /* ==================== MENTOR MOBILE  ==================== */
+
+            #mentor {
+                padding: 0 1rem;
+            }
+
+            /* Centralizar apenas título e parágrafos */
+            #mentor h2,
+            #mentor>p,
+            a {
+                text-align: center !important;
+            }
+
+            #mentor span {
+                margin-top: 50px;
+            }
+
+            /* Container dos textos */
+            #mentor .flex.items-center.gap-6 {
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                gap: 1.5rem !important;
+                border-left: 4px solid;
+                padding-left: 2rem !important;
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
+                margin: 2rem auto !important;
+                background: linear-gradient(to right, rgba(255, 255, 255, 0.05), transparent);
+            }
+
+            /* */
+            #mentor .font-label-caps {
+                text-align: center !important;
+            }
+
+            /* Linha dourada CENTRALIZADA */
+            #mentor .w-16.h-1.bg-primary {
+                margin: 1rem auto !important;
+            }
+
+            #mentor p.font-body-lg {
+                text-align: center !important;
+            }
+
+            #mentor .flex.flex-col {
+                gap: 0 !important;
+            }
+
+            /* Número grande */
+            #mentor .flex.items-center.gap-6 .font-headline-lg {
+                font-size: 3rem !important;
+                white-space: nowrap;
+            }
+
+            /* Textos à direita - manter alinhados à esquerda */
+            #mentor .flex.items-center.gap-6 .flex.flex-col {
+                text-align: left !important;
+            }
+
+            #mentor .flex.items-center.gap-6 span {
+                text-align: left !important;
+                margin-top: 0 !important;
+            }
+
+            #mentor a {
+                display: flex;
+                justify-content: center;
+            }
+
+            /* ==================== FOOTER MOBILE  ==================== */
+
+            footer {
+                text-align: center !important;
+            }
+
+            /* Centralizar logo e texto */
+            footer h2,
+            p,
+            h4,
+            span {
+                text-align: center !important;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            /* Centralizar seções */
+            footer .PLATAFORMA,
+            footer .LEGAL,
+            footer .CONTATO {
+                text-align: center !important;
+            }
+
+            /* Centralizar links */
+            footer a {
+                display: block;
+                text-align: center !important;
+            }
+
+            /* Centralizar ícones sociais */
+            .icones-sociais {
+                justify-content: center !important;
+                display: flex !important;
+            }
+
+            /* Centralizar copyright */
+            footer small,
+            footer p:last-child {
+                text-align: center !important;
+            }
+
+        }
+
+        /* ==================== MOBILE PEQUENO (max-width: 480px) ==================== */
+        @media (max-width: 480px) {
+            .font-display-lg {
+                font-size: 28px !important;
+                line-height: 34px !important;
+            }
+
+            .font-headline-lg {
+                font-size: 22px !important;
+                line-height: 28px !important;
+            }
+
+            .px-container-padding {
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+            }
+
+            .testimonial-card {
+                min-width: 260px !important;
+            }
+        }
+
+        /* ==================== MENU MOBILE LATERAL (max-width: 360px) ==================== */
+        @media (max-width: 360px) {
+            #mobileMenu {
+                width: 90vw;
+            }
         }
     </style>
 </head>
@@ -220,23 +840,99 @@
     <nav
         class="bg-background/90 backdrop-blur-md dark:bg-background/90 font-body-md text-body-md docked full-width top-0 sticky z-50 border-b border-outline-variant/30 shadow-sm transition-all duration-300 ease-in-out">
         <div class="flex justify-between items-center w-full px-container-padding max-w-7xl mx-auto h-20">
+            <!-- Botão Hamburger Mobile (ESQUERDA) -->
+            <button id="mobileMenuBtn" class="md:hidden text-primary focus:outline-none z-50 order-first">
+                <span class="material-symbols-outlined text-4xl">menu</span>
+            </button>
+
+            <!-- Logo (CENTRO NO MOBILE) -->
             <span
-                class="font-display-lg text-headline-md tracking-tighter text-primary dark:text-primary uppercase">Compatíveis</span>
+                class="font-display-lg text-headline-md tracking-tighter text-primary dark:text-primary uppercase md:order-first">
+                Compatíveis
+            </span>
+
+            <!-- Menu Desktop -->
             <div class="hidden md:flex items-center gap-8">
                 <a class="text-primary border-b-2 border-primary pb-1" href="#">Home</a>
                 <a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#programa">O
                     Programa</a>
-                <a href="#mentor" class="text-on-surface-variant hover:text-primary transition-colors duration-300">O
+                <a href="./marcio.html"
+                    class="text-on-surface-variant hover:text-primary transition-colors duration-300">O
                     Mentor</a>
                 <a class="text-on-surface-variant hover:text-primary transition-colors duration-300"
                     href="#footer">Contato</a>
             </div>
+
+            <!-- Botão CTA Desktop -->
             <a href="https://form.respondi.app/eW9PPMu8" target="_blank"
-                class="bg-primary-container font-bold text-on-primary-container px-6 py-3 font-label-caps uppercase bronze-glow transition-all">
+                class="hidden md:block bg-primary-container font-bold text-on-primary-container px-6 py-3 font-label-caps uppercase bronze-glow transition-all text-xs">
+                INICIAR TRANSFORMAÇÃO
+            </a>
+
+            <!-- Espaçador Mobile (para centralizar logo) -->
+            <div class="md:hidden w-10"></div>
+        </div>
+    </nav>
+
+    <!-- Overlay Escuro -->
+    <div id="mobileMenuOverlay"
+        class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[60] opacity-0 invisible transition-all duration-300"></div>
+
+    <!-- Menu Mobile Lateral -->
+    <div id="mobileMenu"
+        class="fixed top-0 left-0 h-full w-[280px] bg-surface-container-high border-r border-outline-variant/30 z-[70] transform -translate-x-full transition-transform duration-300 ease-out shadow-2xl">
+        <!-- Header do Menu -->
+        <div class="flex items-center justify-between p-6 border-b border-outline-variant/20">
+            <span class="font-display-lg text-xl text-primary uppercase">Menu</span>
+            <button id="closeMobileMenu" class="text-on-surface-variant hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+        </div>
+
+        <!-- Links do Menu -->
+        <div class="flex flex-col p-6 gap-2">
+            <a class="text-primary font-headline-md text-lg py-3 px-4 rounded-lg bg-primary/10 border-l-4 border-primary"
+                href="#" onclick="closeMobileMenu()">
+                Home
+            </a>
+            <a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 font-body-lg text-base py-3 px-4 rounded-lg transition-all border-l-4 border-transparent hover:border-primary"
+                href="#programa" onclick="closeMobileMenu()">
+                O Programa
+            </a>
+            <a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 font-body-lg text-base py-3 px-4 rounded-lg transition-all border-l-4 border-transparent hover:border-primary"
+                href="./marcio.html" onclick="closeMobileMenu()">
+                O Mentor
+            </a>
+            <a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 font-body-lg text-base py-3 px-4 rounded-lg transition-all border-l-4 border-transparent hover:border-primary"
+                href="#depoimentos" onclick="closeMobileMenu()">
+                Depoimentos
+            </a>
+            <a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 font-body-lg text-base py-3 px-4 rounded-lg transition-all border-l-4 border-transparent hover:border-primary"
+                href="#footer" onclick="closeMobileMenu()">
+                Contato
+            </a>
+
+            <!-- Botão CTA Mobile -->
+            <a href="https://form.respondi.app/eW9PPMu8" target="_blank"
+                class="mt-6 bg-primary-container font-bold text-on-primary-container px-6 py-4 font-label-caps uppercase bronze-glow transition-all text-center text-xs rounded-lg">
                 INICIAR TRANSFORMAÇÃO
             </a>
         </div>
-    </nav>
+
+        <!-- Footer do Menu (opcional) -->
+        <div class="absolute bottom-0 left-0 right-0 p-6 border-t border-outline-variant/20">
+            <div class="flex gap-4 justify-center">
+                <a href="https://www.instagram.com/marcioaconceicao/" target="_blank"
+                    class="text-primary hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-2xl">photo_camera</span>
+                </a>
+                <a href="https://wa.me/5512997621990" target="_blank"
+                    class="text-primary hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-2xl">chat</span>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
 
@@ -284,7 +980,7 @@
 
     <!-- Section 1: O que vai ter no programa -->
 
-    <section id="programa" class="py-section-gap bg-surface-container-lowest" id="method">
+    <section id="programa" class="py-20 bg-surface-container-lowest" id="method">
         <div class="absolute inset-0 z-0">
             <img alt="Trilha2 background" class="w-full h-full object-cover" src="./assets/backgroundtrilhas.png" />
             <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-black/60 to-background/90"></div>
@@ -352,14 +1048,14 @@
                 </div>
             </div>
 
-            <div class="relative z-10 text-center mb-24">
-                <h2 class="font-headline-lg text-headline-lg text-white mt-4 mb-6"><br>E MAIS...</h2>
+            <div class="relative z-10 text-center mb-5">
+                <div class="flex justify-center mt-5">
+                    <a href="#trilhas" class="seta-proxima">
+                        <span class="material-symbols-outlined text-5xl">arrow_circle_down</span>
+                    </a>
+                </div>
+                <h2 class="font-headline-lg text-headline-lg text-white mb-5">E MAIS...</h2>
                 <div class="w-24 h-px bg-primary mx-auto"></div>
-            </div>
-            <div class="flex justify-center mt-20">
-                <a href="#trilhas" class="seta-proxima">
-                    <span class="material-symbols-outlined text-5xl">arrow_circle_down</span>
-                </a>
             </div>
         </div>
 
@@ -385,7 +1081,7 @@
                     class="group relative aspect-[3/4] overflow-hidden border border-outline-variant/20 cursor-pointer">
                     <img alt="Semana da Desintoxicação"
                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
-                        src="./assets/trilha1.png" />
+                        src="./assets/card1.png" />
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/80 flex flex-col justify-end p-6">
                         <span
@@ -405,7 +1101,7 @@
                     class="group relative aspect-[3/4] overflow-hidden border border-outline-variant/20 mt-8 md:mt-12 cursor-pointer">
                     <img alt="Método 3R's"
                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
-                        src="./assets/trilha2.png" />
+                        src="./assets/card2.png" />
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/80 flex flex-col justify-end p-6">
                         <span
@@ -425,7 +1121,7 @@
                     class="group relative aspect-[3/4] overflow-hidden border border-outline-variant/20 cursor-pointer">
                     <img alt="Resolvendo a sua Vida"
                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
-                        src="./assets/trilha3.png" />
+                        src="./assets/card3.png" />
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/80 flex flex-col justify-end p-6">
                         <span
@@ -445,7 +1141,7 @@
                     class="group relative aspect-[3/4] overflow-hidden border border-outline-variant/20 mt-8 md:mt-12 cursor-pointer">
                     <img alt="Controlando a sua Mente"
                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
-                        src="./assets/trilha4.png" />
+                        src="./assets/card4.png" />
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/80 flex flex-col justify-end p-6">
                         <span
@@ -465,7 +1161,7 @@
                     class="group relative aspect-[3/4] overflow-hidden border border-outline-variant/20 cursor-pointer">
                     <img alt="Lidando com Recaídas"
                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
-                        src="./assets/trilha5.png" />
+                        src="./assets/card5.png" />
                     <div
                         class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/80 flex flex-col justify-end p-6">
                         <span
@@ -594,11 +1290,11 @@
             </div>
         </div>
         <div class="relative z-20 max-w-7xl mx-auto px-container-padding">
-            <div class="text-center mb-24">
+            <div class="text-center mb-10">
                 <span class="font-label-caps text-primary tracking-widest uppercase">Revelar, Romper ou Restaurar</span>
                 <h2 class="font-headline-lg text-headline-lg text-white mt-4 mb-6">Clareza absoluta sobre qual caminho
                 </h2>
-                <p class="font-body-lg text-on-surface-variant mb-12 text-center">
+                <p class="font-body-lg text-on-surface-variant mb-3 text-center">
                     Onde a gente aprofunda na sua Bússola da Decisão. Aqui você vai ter clareza absoluta sobre qual
                     caminho seguir, sem culpa, sem medo, sem arrependimento.
                 </p>
@@ -661,7 +1357,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="flex justify-center mt-20">
+            <div class="flex justify-center mt-2">
                 <a href="#trilha3" class="seta-proxima">
                     <span class="material-symbols-outlined text-5xl">arrow_circle_down</span>
                 </a>
@@ -676,7 +1372,7 @@
             <img alt="Trilha2 background" class="w-full h-full object-cover" src="./assets/backgroundtrilha3.png" />
             <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-black/80 to-background/90"></div>
         </div>
-        <div class="relative z-20 flex justify-center mb-12">
+        <div class="relative z-20 flex justify-center mb-2">
             <span
                 class="inline-block bg-gradient-to-r from-[#8B6914] via-[#C5A059] to-[#8B6914] px-16 py-5 rounded-lg font-headline-md text-white text-2xl tracking-wide uppercase bronze-glow">
                 TRILHA 3
@@ -699,7 +1395,7 @@
                             <span class="font-headline-md text-primary opacity-50">01</span>
                             <div>
                                 <h4 class="font-label-caps text-white mb-2 uppercase">Relacionamento</h4>
-                                <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">O espelho das suas
+                                <p class="font-body-lg text-body-lg text-on-surface-variant mb-2">O espelho das suas
                                     emoções e a base da
                                     estabilidade.</p>
                             </div>
@@ -709,7 +1405,7 @@
                             <span class="font-headline-md text-primary opacity-50">02</span>
                             <div>
                                 <h4 class="font-label-caps text-white mb-2 uppercase">Carreira / Finanças</h4>
-                                <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">A manifestação do seu
+                                <p class="font-body-lg text-body-lg text-on-surface-variant mb-2">A manifestação do seu
                                     valor e objetivo no mundo.
                                 </p>
                             </div>
@@ -719,7 +1415,7 @@
                             <span class="font-headline-md text-primary opacity-50">03</span>
                             <div>
                                 <h4 class="font-label-caps text-white mb-2 uppercase">Saúde</h4>
-                                <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">O pilar que sustenta
+                                <p class="font-body-lg text-body-lg text-on-surface-variant mb-2">O pilar que sustenta
                                     toda a sua jornada terrestre.
                                 </p>
                             </div>
@@ -764,12 +1460,13 @@
                             src="./assets/trilha3.png" />
                     </div>
                 </div>
+                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden lg:block">
+                    <a href="#trilha4" class="seta-proxima">
+                        <span class="material-symbols-outlined text-5xl">arrow_circle_down</span>
+                    </a>
+                </div>
             </div>
-            <div class="flex justify-center mt-20">
-                <a href="#trilha4" class="seta-proxima">
-                    <span class="material-symbols-outlined text-5xl">arrow_circle_down</span>
-                </a>
-            </div>
+
         </div>
     </section>
 
@@ -791,7 +1488,7 @@
 
             <div class="max-w-7xl mx-auto px-container-padding flex flex-col md:flex-row items-center gap-20">
                 <div class="w-full md:w-1/2">
-                    <div class="relative p-1 border border-outline-variant/30">
+                    <div class="max-w-lg relative p-1 border border-outline-variant/30">
                         <img alt="Person reflecting" class="w-full h-auto" src="./assets/trilha4.png" />
                     </div>
                 </div>
@@ -809,7 +1506,8 @@
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center mt-20">
+
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden lg:block">
                 <a href="#trilha5" class="seta-proxima">
                     <span class="material-symbols-outlined text-5xl">arrow_circle_down</span>
                 </a>
@@ -827,7 +1525,7 @@
         </div>
 
         <div class="relative z-20 px-container-padding max-w-7xl mx-auto">
-            <div class="flex justify-center mb-12">
+            <div class="flex justify-center">
                 <span
                     class="inline-block bg-gradient-to-r from-[#8B6914] via-[#C5A059] to-[#8B6914] px-16 py-5 rounded-lg font-headline-md text-white text-2xl tracking-wide uppercase bronze-glow">
                     TRILHA 5
@@ -843,19 +1541,19 @@
                     </p>
 
                     <div class="md:col-span-8 space-y-10">
-                        <div class="relative border-outline-variant/30 w-3/4 mx-auto">
+                        <div class="relative border-outline-variant/30 w-3/4">
                             <img alt="Person reflecting" class="w-full h-auto border-none"
                                 src="./assets/graficotrilha52.png" />
                         </div>
                     </div>
                 </div>
-                <div class="md:col-span-8 space-y-10">
-                    <div class="relative border-outline-variant/30 w-3/4 mx-auto">
-                        <img alt="Person reflecting" class="w-full h-auto" src="./assets/trilha5imagem.png" />
+                <div class="flex justify-end md:col-span-8 space-y-10">
+                    <div class="relative border-outline-variant/30 w-3/4">
+                        <img alt="marcio-trilha5" class="w-full h-auto" src="./assets/trilha5imagem.png" />
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center mt-20">
+            <div class="absolute bottom-20 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden lg:block">
                 <a href="#mentor" class="seta-proxima">
                     <span class="material-symbols-outlined text-5xl">arrow_circle_down</span>
                 </a>
@@ -865,7 +1563,7 @@
 
     <!-- Mentor Márcio Section -->
 
-    <section id="mentor" class="py-section-gap bg-surface-container-low overflow-hidden">
+    <section id="mentor" class="py-10 bg-surface-container-low overflow-hidden">
         <div class="max-w-7xl mx-auto px-container-padding grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
             <div class="relative order-2 md:order-1">
                 <div class="aspect-[4/5] overflow-visible border border-outline-variant/30 img-glow-container">
@@ -877,19 +1575,19 @@
                 <div class="absolute -z-10 -bottom-10 -left-10 w-64 h-64 border border-primary/20"></div>
             </div>
             <div class="order-1 md:order-2">
-                <span class="font-label-caps text-primary tracking-[0.3em] mb-4 block uppercase">O Mentor por trás da
+                <span class="font-label-caps text-primary tracking-[0.3em] block uppercase">O Mentor por trás da
                     sua Transformação</span>
                 <h2 class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-display-lg text-white mb-2">
                     Muito prazer, <span class="text-primary italic"><br>Márcio Conceição.</span>
                 </h2>
-                <div class="w-16 h-1 bg-primary mb-8"></div>
-                <p class="font-body-lg text-on-surface-variant mb-10 leading-relaxed">
+                <div class="w-16 h-1 bg-primary"></div>
+                <p class="font-body-lg text-on-surface-variant leading-relaxed">
                     Sou analista corporal e mentor de relacionamentos. Em mais de 3.960 horas de consultório, vi
                     centenas de casais prestes a assinar o divórcio encontrarem o caminho de volta para casa usando
                     exatamente o método que vou te ensinar neste programa.
                 </p>
                 <div
-                    class="flex items-center gap-6 border-l-4 border-primary pl-8 py-6 bg-gradient-to-r from-surface-container-high/40 to-transparent mb-8">
+                    class="flex items-center gap-6 border-l-4 border-primary pl-8 py-6 bg-gradient-to-r from-surface-container-high/40 to-transparent">
                     <div>
                         <span class="font-headline-lg text-6xl text-primary font-bold">+3.960h</span>
                     </div>
@@ -918,7 +1616,7 @@
             </div>
 
         </div>
-        <div class="flex justify-center mt-20">
+        <div class="absolute bottom-20 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden lg:block">
             <a href="#depoimentos" class="seta-proxima">
                 <span class="material-symbols-outlined text-5xl">arrow_circle_down</span>
             </a>
@@ -926,7 +1624,7 @@
     </section>
 
     <!-- Seção de Depoimentos -->
-    <section id="depoimentos" class="py-section-gap bg-surface-container-lowest overflow-hidden">
+    <section id="depoimentos" class="py-10 bg-surface-container-lowest overflow-hidden">
         <div class="max-w-7xl mx-auto px-container-padding">
             <div class="max-w-4xl mx-auto px-container-padding text-center relative z-10">
                 <h2 class="font-display-lg text-headline-lg text-white mb-6 uppercase tracking-tight">CONHEÇA QUEM JÁ
@@ -1057,74 +1755,97 @@
         </div>
     </section>
 
+    <!-- CTA -->
+
+    <section class="py-section-gap relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div
+                class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent">
+            </div>
+        </div>
+        <div class="container mx-auto px-gutter max-w-4xl text-center relative z-10">
+            <h2 class="font-headline-lg text-headline-lg mb-8">Pronto para a sua transformação?</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">Preencha o formulário para nosso time
+                entrar em contato e garanta seu lugar na jornada de transformação definitiva.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="https://form.respondi.app/eW9PPMu8" target="_blank"
+                    class="bg-primary text-on-primary px-10 py-5 font-label-caps text-label-caps uppercase bronze-glow transition-all">Agendar
+                    Sessão Estratégica</a>
+                <a href="https://wa.me/5512997621990" target="_blank"
+                    class="border border-outline text-on-surface px-10 py-5 font-label-caps text-label-caps uppercase hover:border-primary transition-all">Falar
+                    com Suporte</a>
+            </div>
+        </div>
+    </section>
+
 
 
     <!-- Footer -->
-
     <footer id="footer"
-        class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full py-section-gap border-t border-outline-variant/20 opacity-80 transition-opacity">
-        <div
-            class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-container-padding max-w-7xl mx-auto font-body-md text-body-md">
-            <div class="col-span-1 md:col-span-1">
-                <span
-                    class="font-display-lg text-headline-md text-primary dark:text-primary uppercase mb-6 block">COMPATÍVEIS</span>
-                <p class="text-on-surface-variant/70 leading-relaxed">
-                    Transformando o seu relacionamento e dando clareza para tomar a melhor decisão da sua vida.
-                </p>
-            </div>
-            <div class="flex flex-col gap-4">
-                <h4 class="font-label-caps text-white uppercase mb-2">Plataforma</h4>
-                <a class="text-on-surface-variant hover:text-primary underline underline-offset-4 transition-all"
-                    href="#">Home</a>
-                <a class="text-on-surface-variant hover:text-primary underline underline-offset-4 transition-all"
-                    href="#programa">Metodologia</a>
-                <a class="text-on-surface-variant hover:text-primary underline underline-offset-4 transition-all"
-                    href="#mentor">Mentor</a>
-            </div>
-            <div class="flex flex-col gap-4">
-                <h4 class="font-label-caps text-white uppercase mb-2">Legal</h4>
-                <a class="text-on-surface-variant hover:text-primary underline underline-offset-4 transition-all"
-                    href="#">Termos de uso</a>
-                <a class="text-on-surface-variant hover:text-primary underline underline-offset-4 transition-all"
-                    href="#">Política de privacidade</a>
-                <a class="text-on-surface-variant hover:text-primary underline underline-offset-4 transition-all"
-                    href="#">Política de cookies</a>
-            </div>
-            <div class="flex flex-col gap-4">
-                <h4 class="font-label-caps text-white uppercase mb-2">Contato</h4>
-                <p class="text-on-surface-variant/70">contato@marcioconceicao.com</p>
-                <div class="flex gap-4 mt-2">
-                    <!-- Instagram -->
-                    <a class="text-primary hover:scale-110 transition-transform"
-                        href="https://www.instagram.com/marcioaconceicao/" target="_blank">
-                        <span class="material-symbols-outlined">photo_camera</span>
-                    </a>
-
-                    <!-- YouTube -->
-                    <a class="text-primary hover:scale-110 transition-transform"
-                        href="https://www.youtube.com/@marcioaconceicao" target="_blank">
-                        <span class="material-symbols-outlined">play_circle</span>
-                    </a>
-
-                    <!-- Facebook -->
-                    <a class="text-primary hover:scale-110 transition-transform"
-                        href="https://www.facebook.com/marcioconceicao.com.br" target="_blank">
-                        <span class="material-symbols-outlined">thumb_up</span>
-                    </a>
-
-                    <!-- WhatsApp -->
-                    <a class="text-primary hover:scale-110 transition-transform" href="https://wa.me/5512997621990"
-                        target="_blank">
-                        <span class="material-symbols-outlined">chat</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto px-container-padding mt-24 pt-8 border-t border-outline-variant/10 text-center">
-            <p class="text-on-surface-variant/40 text-xs uppercase font-label-caps tracking-widest">
-                © 2026 Márcio Conceição - Todos os direitos reservados.
+        class="w-full px-gutter pt-12 pb-12 flex flex-col md:flex-row justify-between items-start gap-base border-t border-outline-variant">
+    </footer>
+    <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-container-padding max-w-7xl mx-auto font-body-md text-body-md">
+        <div class="col-span-1 md:col-span-1">
+            <span
+                class="font-display-lg text-headline-md text-primary dark:text-primary uppercase mb-6 block">COMPATÍVEIS</span>
+            <p class="text-on-surface-variant/70 leading-relaxed">
+                Transformando o seu relacionamento e dando clareza para tomar a melhor decisão da sua vida.
             </p>
         </div>
+        <div class="flex flex-col gap-4">
+            <h4 class="font-label-caps text-white uppercase mb-2">Plataforma</h4>
+            <a class="text-on-surface-variant hover:text-primary underline underline-offset-4 transition-all"
+                href="#">Home</a>
+            <a class="text-on-surface-variant hover:text-primary underline underline-offset-4 transition-all"
+                href="#programa">Compatíveis</a>
+            <a class="text-on-surface-variant hover:text-primary underline underline-offset-4 transition-all"
+                href="/marcio.html">Mentor</a>
+        </div>
+        <div class="flex flex-col gap-4">
+            <h4 class="font-label-caps text-white uppercase mb-2">Legal</h4>
+            <a class="text-on-surface-variant hover:text-primary underline underline-offset-4 transition-all"
+                href="#">Termos de uso</a>
+            <a class="text-on-surface-variant hover:text-primary underline underline-offset-4 transition-all"
+                href="#">Política de privacidade</a>
+            <a class="text-on-surface-variant hover:text-primary underline underline-offset-4 transition-all"
+                href="#">Política de cookies</a>
+        </div>
+        <div class="flex flex-col gap-4 ">
+            <h4 class="font-label-caps text-white uppercase mb-2">Contato</h4>
+            <p class="text-on-surface-variant/70">contato@marcioconceicao.com.br</p>
+            <div class="flex gap-4 mt-2 icones-sociais">
+                <!-- Instagram -->
+                <a class="text-primary hover:scale-110 transition-transform"
+                    href="https://www.instagram.com/marcioaconceicao/" target="_blank">
+                    <span class="material-symbols-outlined">photo_camera</span>
+                </a>
+
+                <!-- YouTube -->
+                <a class="text-primary hover:scale-110 transition-transform"
+                    href="https://www.youtube.com/@marcioaconceicao" target="_blank">
+                    <span class="material-symbols-outlined">play_circle</span>
+                </a>
+
+                <!-- Facebook -->
+                <a class="text-primary hover:scale-110 transition-transform"
+                    href="https://www.facebook.com/marcioconceicao.com.br" target="_blank">
+                    <span class="material-symbols-outlined">thumb_up</span>
+                </a>
+
+                <!-- WhatsApp -->
+                <a class="text-primary hover:scale-110 transition-transform" href="https://wa.me/5512997621990"
+                    target="_blank">
+                    <span class="material-symbols-outlined">chat</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-container-padding mt-24 pt-8 border-t border-outline-variant/10 text-center">
+        <p class="text-on-surface-variant/40 text-xs uppercase font-label-caps tracking-widest">
+            © 2026 Márcio Conceição - Todos os direitos reservados.
+        </p>
+    </div>
     </footer>
 
     <!-- Modal de Vídeo do Mentor (YouTube) -->
@@ -1206,6 +1927,60 @@
     </div>
 
     <script>
+
+        // ==================== MENU MOBILE LATERAL ====================
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const overlay = document.getElementById('mobileMenuOverlay');
+            const body = document.body;
+
+            if (menu.classList.contains('active')) {
+                menu.classList.remove('active');
+                overlay.classList.remove('active');
+                body.classList.remove('menu-open');
+            } else {
+                menu.classList.add('active');
+                overlay.classList.add('active');
+                body.classList.add('menu-open');
+            }
+        }
+
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const overlay = document.getElementById('mobileMenuOverlay');
+            const body = document.body;
+
+            menu.classList.remove('active');
+            overlay.classList.remove('active');
+            body.classList.remove('menu-open');
+        }
+
+        // Event Listeners
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const closeMobileMenuBtn = document.getElementById('closeMobileMenu');
+            const overlay = document.getElementById('mobileMenuOverlay');
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            }
+
+            if (closeMobileMenuBtn) {
+                closeMobileMenuBtn.addEventListener('click', closeMobileMenu);
+            }
+
+            // Fechar ao clicar no overlay
+            if (overlay) {
+                overlay.addEventListener('click', closeMobileMenu);
+            }
+
+            // Fechar ao pressionar ESC
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    closeMobileMenu();
+                }
+            });
+        });
         // ==================== DEPOIMENTOS (YouTube) ====================
         function openTestimonialVideo(videoId) {
             console.log('🎬 Abrindo vídeo:', videoId);
