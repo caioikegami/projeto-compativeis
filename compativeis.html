@@ -1,0 +1,2359 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Compatíveis - Transforme seu relacionamento</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Manrope:wght@200..800&amp;display=swap">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#2a2a2a",
+                        "on-tertiary": "#3a2e21",
+                        "surface-bright": "#3a3939",
+                        "secondary-container": "#474746",
+                        "on-secondary-fixed-variant": "#474746",
+                        "inverse-surface": "#e5e2e1",
+                        "secondary": "#c8c6c5",
+                        "tertiary-fixed-dim": "#d7c3b0",
+                        "primary-fixed": "#ffdea5",
+                        "on-error": "#690005",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-primary-fixed": "#261900",
+                        "tertiary-fixed": "#f4dfcb",
+                        "surface-tint": "#e9c176",
+                        "on-tertiary-fixed-variant": "#524436",
+                        "on-background": "#e5e2e1",
+                        "tertiary-container": "#b4a28f",
+                        "surface-container-low": "#1c1b1b",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#e9c176",
+                        "tertiary": "#d7c3b0",
+                        "surface-dim": "#131313",
+                        "surface": "#131313",
+                        "on-surface-variant": "#d1c5b4",
+                        "on-secondary": "#313030",
+                        "surface-container-highest": "#353534",
+                        "outline": "#9a8f80",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "outline-variant": "#4e4639",
+                        "inverse-on-surface": "#313030",
+                        "on-surface": "#e5e2e1",
+                        "surface-variant": "#353534",
+                        "surface-container": "#201f1f",
+                        "on-primary": "#412d00",
+                        "primary": "#e9c176",
+                        "on-tertiary-container": "#45392a",
+                        "on-tertiary-fixed": "#241a0d",
+                        "primary-container": "#c5a059",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "inverse-primary": "#775a19",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-container": "#4e3700",
+                        "on-secondary-container": "#b7b5b4",
+                        "error": "#ffb4ab",
+                        "background": "#131313"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "base": "8px",
+                        "section-gap": "120px",
+                        "container-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Bodoni Moda"],
+                        "display-lg": ["Bodoni Moda"],
+                        "label-caps": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "headline-md": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "fontWeight": "600" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "500" }]
+                    }
+                },
+            },
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .bronze-glow:hover {
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.3);
+        }
+
+        .text-shadow-premium {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .mask-gradient {
+            mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+        }
+
+        /* ==================== BOTÕES FIXOS ==================== */
+        .btn-whatsapp {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 1px 1px 2px #888;
+            z-index: 1000;
+        }
+
+        .fa-whatsapp {
+            margin-top: 16px;
+        }
+
+        .btn-voltar {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 50;
+            background: linear-gradient(135deg, #e9c176, #c5a059);
+            color: #000;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .btn-voltar:hover {
+            transform: translateX(-50%) scale(1.1);
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.5);
+        }
+
+        /* ==================== TRILHAS ==================== */
+        #trilha1,
+        #trilha2,
+        #trilha3,
+        #trilha4,
+        #trilha5 {
+            padding-top: 40px;
+            padding-bottom: 100px !important;
+        }
+
+        /* ==================== TRANSIÇÕES ENTRE SECTIONS ==================== */
+        section {
+            position: relative;
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: linear-gradient(to bottom, rgba(19, 19, 19, 1), transparent);
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: linear-gradient(to top, rgba(19, 19, 19, 1), transparent);
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        section:first-of-type::before,
+        section:last-of-type::after {
+            display: none;
+        }
+
+        /* ==================== EFEITOS VISUAIS ==================== */
+        .img-glow-container {
+            position: relative;
+            overflow: visible;
+        }
+
+        .img-glow-container::before {
+            content: '';
+            position: absolute;
+            inset: -10px;
+            background: radial-gradient(circle, rgba(233, 193, 118, 0.4) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .img-glow-container:hover::before {
+            opacity: 1;
+        }
+
+        .img-glow-container img {
+            transition: all 0.7s ease;
+        }
+
+        .img-glow-container:hover img {
+            filter: grayscale(0%) brightness(1.1);
+            transform: scale(1.02);
+        }
+
+        /* ==================== CARROSSEL ==================== */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .testimonial-card {
+            transition: transform 0.3s ease;
+            scroll-snap-align: center;
+            scroll-snap-stop: normal;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+        }
+
+        #testimonialCarousel {
+            scroll-behavior: smooth;
+            transition: scroll 0.3s ease-out;
+        }
+
+        /* ==================== MENU MOBILE ==================== */
+        #mobileMenuOverlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #mobileMenu.active {
+            transform: translateX(0);
+        }
+
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        #mobileMenu a {
+            transition: all 0.3s ease;
+        }
+
+        #mobileMenu a:hover {
+            transform: translateX(4px);
+        }
+
+        #mobileMenuBtn {
+            transition: transform 0.2s ease;
+        }
+
+        #mobileMenuBtn:active {
+            transform: scale(0.9);
+        }
+
+        /* ==================== RESPONSIVIDADE MOBILE (max-width: 768px) ==================== */
+        @media (max-width: 768px) {
+
+            /* ===== TIPOGRAFIA ===== */
+            .font-display-lg {
+                font-size: 32px !important;
+                line-height: 38px !important;
+            }
+
+            .font-headline-lg {
+                font-size: 24px !important;
+                line-height: 30px !important;
+            }
+
+            .font-headline-lg-mobile {
+                font-size: 28px !important;
+                line-height: 34px !important;
+            }
+
+            .font-headline-md {
+                font-size: 20px !important;
+                line-height: 26px !important;
+            }
+
+            .font-body-lg {
+                font-size: 16px !important;
+                line-height: 24px !important;
+            }
+
+            /* ===== ESPAÇAMENTOS GERAIS ===== */
+            .py-section-gap {
+                padding-top: 60px !important;
+                padding-bottom: 60px !important;
+            }
+
+            .px-container-padding {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            .gap-gutter {
+                gap: 20px !important;
+            }
+
+            /* ===== HERO SECTION ===== */
+            section.min-h-\[90vh\] {
+                min-height: 70vh !important;
+                padding-top: 155px !important;
+            }
+
+            section.min-h-\[90vh\] .py-section-gap {
+                padding-top: 40px !important;
+                padding-bottom: 40px !important;
+            }
+
+            section.min-h-\[90vh\] .max-w-3xl {
+                max-width: 100% !important;
+                padding: 0 20px;
+            }
+
+            section.min-h-\[90vh\] .font-label-caps {
+                font-size: 10px !important;
+                margin-bottom: 16px !important;
+            }
+
+            section.min-h-\[90vh\] .font-display-lg {
+                font-size: 28px !important;
+                line-height: 34px !important;
+                margin-bottom: 20px !important;
+            }
+
+            section.min-h-\[90vh\] .font-body-lg {
+                font-size: 14px !important;
+                line-height: 22px !important;
+                margin-bottom: 24px !important;
+            }
+
+            section.min-h-\[90vh\] .px-10 {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            section.min-h-\[90vh\] .py-5 {
+                padding-top: 12px !important;
+                padding-bottom: 12px !important;
+            }
+
+            /* ===== GRID - 1 COLUNA ===== */
+            .grid-cols-1.md\:grid-cols-3,
+            .grid-cols-1.md\:grid-cols-4,
+            .grid-cols-1.md\:grid-cols-5 {
+                grid-template-columns: 1fr !important;
+            }
+
+            /* ===== PROGRAMA SECTION ===== */
+            #programa .scale-105 {
+                transform: scale(1) !important;
+                box-shadow: none !important;
+            }
+
+            /* ===== TRILHAS SECTION ===== */
+            #trilhas .mb-20 {
+                margin-bottom: 30px !important;
+            }
+
+            #trilhas .grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 16px !important;
+            }
+
+            #trilhas .aspect-\[3\/4\] {
+                aspect-ratio: 3/4 !important;
+                max-height: 280px !important;
+            }
+
+            #trilhas .mt-8,
+            #trilhas .md\:mt-12 {
+                margin-top: 0 !important;
+            }
+
+            #trilhas .px-8 {
+                padding-left: 12px !important;
+                padding-right: 12px !important;
+            }
+
+            #trilhas .py-3 {
+                padding-top: 8px !important;
+                padding-bottom: 8px !important;
+            }
+
+            #trilhas .font-headline-md {
+                font-size: 14px !important;
+                line-height: 18px !important;
+            }
+
+            #trilhas .text-xs.opacity-0 {
+                display: none !important;
+            }
+
+            #trilhas .p-6 {
+                padding: 12px !important;
+            }
+
+            #trilhas .grid>a:last-child {
+                grid-column: span 2;
+                max-width: 50%;
+                margin: 0 auto;
+            }
+
+            /* ===== CARDS ===== */
+            .p-10 {
+                padding: 24px !important;
+            }
+
+            /* ===== BOTÕES ===== */
+            .px-10 {
+                padding-left: 24px !important;
+                padding-right: 24px !important;
+            }
+
+            .py-5 {
+                padding-top: 16px !important;
+                padding-bottom: 16px !important;
+            }
+
+            /* ===== FLEX ===== */
+            .flex-col.sm\:flex-row {
+                flex-direction: column !important;
+            }
+
+            /* ===== IMAGENS ===== */
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            /* Imagens coloridas mas ainda com zoom no hover */
+            #trilhas .grayscale {
+                filter: grayscale(0%) !important;
+            }
+
+            #trilhas img {
+                filter: grayscale(0%) !important;
+                transform: scale(1) !important;
+                /* Tamanho normal */
+                transition: transform 0.3s ease !important;
+            }
+
+            /* Zoom ao clicar/tocar */
+            #trilhas a:active img {
+                transform: scale(1.05) !important;
+            }
+
+            /* ===== DEPOIMENTOS ===== */
+            .testimonial-card {
+                min-width: 280px !important;
+            }
+
+            #testimonialCarousel {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            /* ===== MODAIS ===== */
+            .max-w-xl,
+            .max-w-2xl,
+            .max-w-3xl,
+            .max-w-5xl {
+                max-width: 95vw !important;
+            }
+
+            .aspect-\[9\/16\] {
+                max-height: 75vh !important;
+            }
+
+            .absolute.-top-16 {
+                top: -60px !important;
+            }
+
+            /* ===== NAVBAR ===== */
+            nav .h-20 {
+                height: 70px !important;
+            }
+
+            nav a.bg-primary-container {
+                padding: 5px 10px !important;
+                font-size: 8px !important;
+            }
+
+            /* ===== BOTÕES FIXOS ===== */
+            .btn-whatsapp {
+                width: 50px !important;
+                height: 50px !important;
+                bottom: 20px !important;
+                right: 20px !important;
+                font-size: 24px !important;
+            }
+
+            /* ===== ÍCONES ===== */
+            .text-5xl {
+                font-size: 40px !important;
+            }
+
+            .text-6xl {
+                font-size: 48px !important;
+            }
+
+            /* ----- TRILHA 1 MOBILE ----- */
+            #trilha1 {
+                padding-top: 40px !important;
+                padding-bottom: 60px !important;
+            }
+
+            #trilha1 span {
+                text-align: center;
+                display: block;
+                /* Importante! Span é inline por padrão */
+            }
+
+            #trilha1 h2 {
+                text-align: center;
+                display: block;
+                /* Importante! Span é inline por padrão */
+            }
+
+            #trilha1 p {
+                text-align: center;
+                display: block;
+                /* Importante! Span é inline por padrão */
+            }
+
+            /* Reorganizar layout: texto em cima, imagem embaixo */
+            #trilha1 .flex.flex-col.lg\:flex-row {
+                flex-direction: column !important;
+            }
+
+            /* Texto primeiro */
+            #trilha1 .w-full.lg\:w-1\/2:first-child {
+                order: 1;
+                margin-bottom: 32px;
+            }
+
+            /* Imagem por último */
+            #trilha1 .w-full.lg\:w-1\/2:last-child {
+                order: 2;
+                position: relative;
+                z-index: 1;
+                /* Garante que fica por baixo */
+            }
+
+            /* Ajustar container da imagem */
+            #trilha1 .relative.flex {
+                margin-top: 32px;
+                max-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            /* Lista de itens com z-index maior */
+            #trilha1 .space-y-8 {
+                position: relative;
+                z-index: 10;
+                /* Texto por cima */
+            }
+
+            /* Reduzir espaçamento entre itens */
+            #trilha1 .space-y-8>div {
+                margin-bottom: 16px !important;
+            }
+
+            #trilha1 .space-y-8 {
+                gap: 16px !important;
+            }
+
+            #trilha1 .flex-col.lg\:flex-row {
+                flex-direction: column !important;
+            }
+
+            /* ----- TRILHA 2 MOBILE ----- */
+            #trilha2 {
+                padding-bottom: 60px !important;
+            }
+
+            #trilha2 .grid {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+
+            #trilha2 .p-10 {
+                padding: 20px !important;
+            }
+
+            /* ----- TRILHA 3 MOBILE ----- */
+
+            #trilha3 span {
+                text-align: center;
+                display: block;
+                /* Importante! Span é inline por padrão */
+            }
+
+            #trilha3 h2 {
+                text-align: center;
+                display: block;
+                /* Importante! Span é inline por padrão */
+            }
+
+            #trilha3 .relative.z-20 {
+                margin-bottom: 2rem !important;
+            }
+
+            #trilha3 p.mb-12 {
+                text-align: center !important;
+            }
+
+            #trilha3 .w-full.lg\:w-1\/2.relative {
+                display: none !important;
+            }
+
+            #trilha3 {
+                padding-bottom: 60px !important;
+            }
+
+            #trilha3 .flex-col.lg\:flex-row {
+                flex-direction: column !important;
+            }
+
+            #trilha3 .w-80,
+            #trilha3 .md\:w-\[500px\] {
+                width: 280px !important;
+                height: 280px !important;
+            }
+
+            /* ----- TRILHA 4 MOBILE ----- */
+
+            #trilha4 .max-w-lg.relative {
+                display: none !important;
+            }
+
+            #trilha4 .flex.justify-center.mb-12 {
+                margin-bottom: 0px !important;
+            }
+
+            #trilha4 h2 {
+                text-align: center;
+                display: block;
+            }
+
+            #trilha4 p {
+                text-align: center;
+                display: block;
+            }
+
+            #trilha4 .font-label-caps {
+                text-align: center !important;
+            }
+
+            #trilha4 {
+                padding-bottom: 60px !important;
+            }
+
+            #trilha4 .flex-col.md\:flex-row {
+                flex-direction: column !important;
+            }
+
+            #trilha4 img {
+                max-width: 100% !important;
+            }
+
+            /* ----- TRILHA 5 MOBILE ----- */
+
+            #trilha5 .flex.justify-center {
+                margin-bottom: 30px !important;
+            }
+
+            #trilha5 h2 {
+                text-align: center;
+                display: block;
+            }
+
+            #trilha5 h3 {
+                text-align: center;
+                display: block;
+            }
+
+            #trilha5 p {
+                text-align: center;
+                display: block;
+            }
+
+            #trilha5 .w-full.h-auto.border-none {
+                display: none !important;
+            }
+
+            #trilha5 .flex.justify-end {
+                justify-content: center !important;
+            }
+
+
+            #trilha5 {
+                padding-bottom: 60px !important;
+            }
+
+            #trilha5 .md\:col-span-4 {
+                grid-column: span 1 !important;
+            }
+
+            #trilha5 .md\:col-span-8 {
+                grid-column: span 1 !important;
+            }
+
+            #trilha5 .sticky {
+                position: relative !important;
+                top: auto !important;
+            }
+
+            /* ==================== MENTOR MOBILE  ==================== */
+
+            #mentor {
+                padding: 0 1rem;
+            }
+
+            /* Centralizar apenas título e parágrafos */
+            #mentor h2,
+            #mentor>p,
+            a {
+                text-align: center !important;
+            }
+
+            #mentor span {
+                margin-top: 50px;
+            }
+
+            /* Container dos textos */
+            #mentor .flex.items-center.gap-6 {
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                gap: 1.5rem !important;
+                border-left: 4px solid;
+                padding-left: 2rem !important;
+                padding-top: 1.5rem !important;
+                padding-bottom: 1.5rem !important;
+                margin: 2rem auto !important;
+                background: linear-gradient(to right, rgba(255, 255, 255, 0.05), transparent);
+            }
+
+            /* */
+            #mentor .font-label-caps {
+                text-align: center !important;
+            }
+
+            /* Linha dourada CENTRALIZADA */
+            #mentor .w-16.h-1.bg-primary {
+                margin: 1rem auto !important;
+            }
+
+            #mentor p.font-body-lg {
+                text-align: center !important;
+            }
+
+            #mentor .flex.flex-col {
+                gap: 0 !important;
+            }
+
+            /* Número grande */
+            #mentor .flex.items-center.gap-6 .font-headline-lg {
+                font-size: 3rem !important;
+                white-space: nowrap;
+            }
+
+            /* Textos à direita - manter alinhados à esquerda */
+            #mentor .flex.items-center.gap-6 .flex.flex-col {
+                text-align: left !important;
+            }
+
+            #mentor .flex.items-center.gap-6 span {
+                text-align: left !important;
+                margin-top: 0 !important;
+            }
+
+            #mentor a {
+                display: flex;
+                justify-content: center;
+            }
+
+            /* ==================== FOOTER MOBILE  ==================== */
+
+            footer {
+                text-align: center !important;
+            }
+
+            /* Centralizar logo e texto */
+            footer h2,
+            p,
+            h4,
+            span {
+                text-align: center !important;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            /* Centralizar seções */
+            footer .PLATAFORMA,
+            footer .LEGAL,
+            footer .CONTATO {
+                text-align: center !important;
+            }
+
+            /* Centralizar links */
+            footer a {
+                display: block;
+                text-align: center !important;
+            }
+
+            /* Centralizar ícones sociais */
+            .icones-sociais {
+                justify-content: center !important;
+                display: flex !important;
+            }
+
+            /* Centralizar copyright */
+            footer small,
+            footer p:last-child {
+                text-align: center !important;
+            }
+
+        }
+
+        /* ==================== MOBILE PEQUENO (max-width: 480px) ==================== */
+        @media (max-width: 480px) {
+            .font-display-lg {
+                font-size: 28px !important;
+                line-height: 34px !important;
+            }
+
+            .font-headline-lg {
+                font-size: 22px !important;
+                line-height: 28px !important;
+            }
+
+            .px-container-padding {
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+            }
+
+            .testimonial-card {
+                min-width: 260px !important;
+            }
+        }
+
+        /* ==================== MENU MOBILE LATERAL (max-width: 360px) ==================== */
+        @media (max-width: 360px) {
+            #mobileMenu {
+                width: 90vw;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md selection:bg-primary/30">
+
+    <!-- TopNavBar -->
+    <nav
+        class="bg-background/90 backdrop-blur-md dark:bg-background/90 font-body-md text-body-md docked full-width top-0 sticky z-50 border-b border-outline-variant/30 shadow-sm transition-all duration-300 ease-in-out">
+        <div class="flex justify-between items-center w-full px-container-padding max-w-7xl mx-auto h-20">
+            <!-- Botão Hamburger Mobile (ESQUERDA) -->
+            <button id="mobileMenuBtn" class="md:hidden text-primary focus:outline-none z-50 order-first">
+                <span class="material-symbols-outlined text-4xl">menu</span>
+            </button>
+
+            <!-- Logo (CENTRO NO MOBILE) -->
+            <span
+                class="font-display-lg text-headline-md tracking-tighter text-primary dark:text-primary uppercase md:order-first">
+                Compatíveis
+            </span>
+
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="./index.html">Home</a>
+                <a class="text-primary border-b-2 border-primary pb-1" href="./compativeis.html">
+                    Compatíveis</a>
+                <a href="./marcio.html"
+                    class="text-on-surface-variant hover:text-primary transition-colors duration-300">O
+                    Mentor</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors duration-300"
+                    href="#footer">Contato</a>
+            </div>
+
+            <!-- Botão CTA Desktop -->
+            <a href="https://form.respondi.app/eW9PPMu8" target="_blank"
+                class="hidden md:block bg-primary-container font-bold text-on-primary-container px-6 py-3 font-label-caps uppercase bronze-glow transition-all text-xs rounded-md">
+                INICIAR TRANSFORMAÇÃO
+            </a>
+
+            <!-- Espaçador Mobile (para centralizar logo) -->
+            <div class="md:hidden w-10"></div>
+        </div>
+    </nav>
+
+    <!-- Overlay Escuro -->
+    <div id="mobileMenuOverlay"
+        class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[60] opacity-0 invisible transition-all duration-300"></div>
+
+    <!-- Menu Mobile Lateral -->
+    <div id="mobileMenu"
+        class="fixed top-0 left-0 h-full w-[280px] bg-surface-container-high border-r border-outline-variant/30 z-[70] transform -translate-x-full transition-transform duration-300 ease-out shadow-2xl">
+        <!-- Header do Menu -->
+        <div class="flex items-center justify-between p-6 border-b border-outline-variant/20">
+            <span class="font-display-lg text-xl text-primary uppercase">Menu</span>
+            <button id="closeMobileMenu" class="text-on-surface-variant hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+        </div>
+
+        <!-- Links do Menu -->
+        <div class="flex flex-col p-6 gap-2">
+            <a class="text-primary font-headline-md text-lg py-3 px-4 rounded-lg bg-primary/10 border-l-4 border-primary"
+                href="./index.html" onclick="closeMobileMenu()">
+                Home
+            </a>
+            <a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 font-body-lg text-base py-3 px-4 rounded-lg transition-all border-l-4 border-transparent hover:border-primary"
+                href="./compativeis.html" onclick="closeMobileMenu()">
+                Compatíveis
+            </a>
+            <a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 font-body-lg text-base py-3 px-4 rounded-lg transition-all border-l-4 border-transparent hover:border-primary"
+                href="./marcio.html" onclick="closeMobileMenu()">
+                O Mentor
+            </a>
+            <a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 font-body-lg text-base py-3 px-4 rounded-lg transition-all border-l-4 border-transparent hover:border-primary"
+                href="#depoimentos" onclick="closeMobileMenu()">
+                Depoimentos
+            </a>
+            <a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 font-body-lg text-base py-3 px-4 rounded-lg transition-all border-l-4 border-transparent hover:border-primary"
+                href="#footer" onclick="closeMobileMenu()">
+                Contato
+            </a>
+
+            <!-- Botão CTA Mobile -->
+            <a href="https://form.respondi.app/eW9PPMu8" target="_blank"
+                class="mt-6 bg-primary-container font-bold text-on-primary-container px-6 py-4 font-label-caps uppercase bronze-glow transition-all text-center text-xs rounded-md">
+                INICIAR TRANSFORMAÇÃO
+            </a>
+        </div>
+
+        <!-- Footer do Menu (opcional) -->
+        <div class="absolute bottom-0 left-0 right-0 p-6 border-t border-outline-variant/20">
+            <div class="flex gap-4 justify-center">
+                <a href="https://www.instagram.com/marcioaconceicao/" target="_blank"
+                    class="text-primary hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-2xl">photo_camera</span>
+                </a>
+                <a href="https://wa.me/5512997621990" target="_blank"
+                    class="text-primary hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-2xl">chat</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+
+    <a class="btn-whatsapp" href="https://wa.me/5512997621990" target="_blank">
+        <i class="fa fa-whatsapp"></i>
+    </a>
+
+    <a href="#trilhas" class="btn-voltar">
+        <span class="material-symbols-outlined text-2xl">arrow_upward</span>
+    </a>
+
+    <section class="relative min-h-[90vh] flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img alt="Hero background" class="w-full h-full object-cover opacity-60"
+                src="./assets/backgroundmarcio.png" />
+            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-container-padding w-full py-section-gap">
+            <div class="max-w-3xl">
+                <p class="font-label-caps text-primary mb-4 tracking-[0.3em] uppercase">Márcio Conceição</p>
+                <h1 class="font-display-lg text-display-lg text-white mb-8 leading-tight">
+                    TRANSFORME SEU RELACIONAMENTO <span class="text-primary">- COM CLAREZA E DECISÃO</span>
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                    O programa que vai transformar o seu relacionamento — ou te dar clareza para tomar a melhor decisão
+                    da sua vida.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <a href="https://form.respondi.app/eW9PPMu8" target="_blank"
+                        class="bg-primary text-black px-10 py-5 font-label-caps bronze-glow transition-all text-center rounded-md">
+                        INICIAR TRANSFORMAÇÃO
+                    </a>
+                    <a href="#programa"
+                        class="border border-primary text-primary px-10 py-5 font-label-caps hover:bg-primary/10 transition-all text-center rounded-md">
+                        CONHECER O PROGRAMA
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- Section 1: O que vai ter no programa -->
+
+    <section id="programa" class="py-20 bg-surface-container-lowest" id="method">
+        <div class="absolute inset-0 z-0">
+            <img alt="Trilha2 background" class="w-full h-full object-cover" src="./assets/backgroundtrilhas.png" />
+            <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-black/60 to-background/90"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-container-padding">
+            <div class="relative z-10 text-center mb-24">
+                <span class="font-label-caps text-primary tracking-widest uppercase">O que você vai ter no</span>
+                <h2 class="font-headline-lg text-headline-lg text-white mt-4 mb-6">COMPATÍVEIS</h2>
+                <div class="w-24 h-px bg-primary mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <!-- 12 Encontros ao Vivo Prévia -->
+                <div
+                    class="group p-10 border border-outline-variant/20 bg-surface-container-low hover:border-primary/50 transition-all duration-500">
+                    <div class="mb-8 text-primary">
+                        <span class="material-symbols-outlined text-5xl"
+                            style="font-variation-settings: 'FILL' 0;">video_chat</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">12 Encontros ao Vivo<br> (12 Meses)
+                    </h3>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed mb-6">
+                        1 encontro por mês durante 12 meses
+                    </p>
+
+                    <button onclick="openInfoModal('encontros')"
+                        class="mt-6 bg-primary-container text-on-primary-container px-6 py-3 font-label-caps uppercase bronze-glow transition-all hover:scale-105">
+                        SAIBA MAIS
+                    </button>
+
+                </div>
+                <!-- Comunidade Exclusiva Prévia -->
+                <div
+                    class="group p-10 border border-outline-variant/20 bg-surface-container-low hover:border-primary/50 transition-all duration-500 scale-105 shadow-2xl relative z-10">
+                    <div class="mb-8 text-primary">
+                        <span class="material-symbols-outlined text-5xl"
+                            style="font-variation-settings: 'FILL' 0;">groups</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Comunidade Exclusiva</h3>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed mb-6">
+                        Você nunca mais vai se sentir sozinho.
+                    </p>
+                    <!-- Card 2: Comunidade -->
+                    <button onclick="openInfoModal('comunidade')"
+                        class="mt-6 bg-primary-container text-on-primary-container px-6 py-3 font-label-caps uppercase bronze-glow transition-all hover:scale-105">
+                        SAIBA MAIS
+                    </button>
+
+                </div>
+                <!-- Bônus Exclusivos Prévia -->
+                <div
+                    class="group p-10 border border-outline-variant/20 bg-surface-container-low hover:border-primary/50 transition-all duration-500">
+                    <div class="mb-8 text-primary">
+                        <span class="material-symbols-outlined text-5xl"
+                            style="font-variation-settings: 'FILL' 0;">rewarded_ads</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Masterclass Bônus</h3>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed mb-6">
+                        Prepara-se para 4 bônus exclusivos de masterclass.
+                    </p>
+                    <!-- Card 3: Bônus -->
+                    <button onclick="openInfoModal('bonus')"
+                        class="mt-6 bg-primary-container text-on-primary-container px-6 py-3 font-label-caps uppercase bronze-glow transition-all hover:scale-105">
+                        SAIBA MAIS
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative z-10 text-center mb-5">
+                <div class="flex justify-center mt-5">
+                    <a href="#trilhas" class="seta-proxima">
+                        <span class="material-symbols-outlined text-5xl">arrow_circle_down</span>
+                    </a>
+                </div>
+                <h2 class="font-headline-lg text-headline-lg text-white mb-5">E MAIS...</h2>
+                <div class="w-24 h-px bg-primary mx-auto"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Section 1: AS 5 TRILHAS -->
+
+    <section id="trilhas" class="relative py-section-gap overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img alt="Background Trilhas" class="w-full h-full object-cover" src="./assets/backgroundtrilhas1.png" />
+            <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-black/60 to-background/90"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-container-padding">
+            <div class="mb-20 text-center">
+                <h2 class="font-headline-lg text-headline-lg mb-4">5 Trilhas de Transformação</h2>
+                <div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+                <!-- Trail 1 -->
+                <a href="#trilha1"
+                    class="group relative aspect-[3/4] overflow-hidden border border-outline-variant/20 cursor-pointer">
+                    <img alt="Semana da Desintoxicação"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
+                        src="./assets/card1.png" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/80 flex flex-col justify-end p-6">
+                        <span
+                            class="inline-block bg-gradient-to-r from-[#8B6914] via-[#C5A059] to-[#8B6914] px-8 py-3 rounded-lg font-label-caps text-white text-center tracking-wide uppercase bronze-glow mb-4">
+                            TRILHA 1
+                        </span>
+                        <h3 class="font-headline-md text-headline-md text-white mb-2 leading-tight text-center">
+                            Desintoxicação Emocional</h3>
+                        <p
+                            class="text-xs text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center">
+                            Limpar o terreno antes de construir.</p>
+                    </div>
+                </a>
+
+                <!-- Trail 2 -->
+                <a href="#trilha2"
+                    class="group relative aspect-[3/4] overflow-hidden border border-outline-variant/20 mt-8 md:mt-12 cursor-pointer">
+                    <img alt="Método 3R's"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
+                        src="./assets/card2.png" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/80 flex flex-col justify-end p-6">
+                        <span
+                            class="inline-block bg-gradient-to-r from-[#8B6914] via-[#C5A059] to-[#8B6914] px-8 py-3 rounded-lg font-headline-md text-white text-center tracking-wide uppercase bronze-glow mb-4">
+                            TRILHA 2
+                        </span>
+                        <h3 class="font-headline-md text-headline-md text-white mb-2 leading-tight text-center">Revelar,
+                            Romper ou Restaurar</h3>
+                        <p
+                            class="text-xs text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center">
+                            Clareza absoluta sobre qual caminho seguir.</p>
+                    </div>
+                </a>
+
+                <!-- Trail 3 -->
+                <a href="#trilha3"
+                    class="group relative aspect-[3/4] overflow-hidden border border-outline-variant/20 cursor-pointer">
+                    <img alt="Resolvendo a sua Vida"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
+                        src="./assets/card3.png" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/80 flex flex-col justify-end p-6">
+                        <span
+                            class="inline-block bg-gradient-to-r from-[#8B6914] via-[#C5A059] to-[#8B6914] px-8 py-3 rounded-lg font-headline-md text-white text-center tracking-wide uppercase bronze-glow mb-4">
+                            TRILHA 3
+                        </span>
+                        <h3 class="font-headline-md text-headline-md text-white mb-2 leading-tight text-center">As 3
+                            Áreas da Vida</h3>
+                        <p
+                            class="text-xs text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center">
+                            Quando uma área desmorona, as outras vão junto.</p>
+                    </div>
+                </a>
+
+                <!-- Trail 4 -->
+                <a href="#trilha4"
+                    class="group relative aspect-[3/4] overflow-hidden border border-outline-variant/20 mt-8 md:mt-12 cursor-pointer">
+                    <img alt="Controlando a sua Mente"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
+                        src="./assets/card4.png" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/80 flex flex-col justify-end p-6">
+                        <span
+                            class="inline-block bg-gradient-to-r from-[#8B6914] via-[#C5A059] to-[#8B6914] px-8 py-3 rounded-lg font-headline-md text-white text-center tracking-wide uppercase bronze-glow mb-4">
+                            TRILHA 4
+                        </span>
+                        <h3 class="font-headline-md text-headline-md text-white mb-2 leading-tight text-center">O Manual
+                            dos Traços</h3>
+                        <p
+                            class="text-xs text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center">
+                            O Manual de instruções de você e do seu parceiro.</p>
+                    </div>
+                </a>
+
+                <!-- Trail 5 -->
+                <a href="#trilha5"
+                    class="group relative aspect-[3/4] overflow-hidden border border-outline-variant/20 cursor-pointer">
+                    <img alt="Lidando com Recaídas"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
+                        src="./assets/card5.png" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/80 flex flex-col justify-end p-6">
+                        <span
+                            class="inline-block bg-gradient-to-r from-[#8B6914] via-[#C5A059] to-[#8B6914] px-8 py-3 rounded-lg font-headline-md text-white text-center tracking-wide uppercase bronze-glow mb-4">
+                            TRILHA 5
+                        </span>
+                        <h3 class="font-headline-md text-headline-md text-white mb-2 leading-tight text-center">Lidando
+                            com Recaídas</h3>
+                        <p
+                            class="text-xs text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-center">
+                            A jornada real tem altos e baixos.</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Seta para próxima seção -->
+            <div class="flex justify-center mt-20">
+                <a href="#trilha1" class="seta-proxima">
+                    <span class="material-symbols-outlined text-5xl">arrow_circle_down</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trilha1: Desintoxicação Emocional -->
+
+    <section id="trilha1" class="py-section-gap overflow-hidden relative">
+        <div class="absolute inset-0 z-0">
+            <img alt="Trilha2 background" class="w-full h-full object-cover" src="./assets/backgroundtrilha1.png" />
+            <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-black/60 to-background/90"></div>
+        </div>
+        <!-- Botão no topo centralizado -->
+        <div class="relative z-10 flex justify-center mb-12">
+            <span
+                class="inline-block bg-gradient-to-r from-[#8B6914] via-[#C5A059] to-[#8B6914] px-16 py-5 rounded-lg font-headline-md text-white text-2xl tracking-wide uppercase bronze-glow">
+                TRILHA 1
+            </span>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-container-padding">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="w-full lg:w-1/2">
+                    <span class="font-label-caps text-primary uppercase">Desintoxicação Emocional</span>
+                    <h2 class="font-headline-lg text-headline-lg text-white mt-4 mb-8">Limpar o terreno antes de
+                        construir</h2>
+                    <p class="font-body-lg text-on-surface-variant mb-12">
+                        Aqui a gente vai tirar o lixo emocional que você vem acumulando há anos. Você vai aprender a
+                        parar de reagir no automático e começar a responder com consciência.
+                    </p>
+                    <div class="space-y-8">
+                        <div
+                            class="flex items-start gap-6 border-l-2 border-primary/20 pl-6 hover:border-primary transition-all">
+                            <span class="font-headline-md text-primary opacity-50">01</span>
+                            <div>
+                                <h4 class="font-label-caps text-white mb-2 uppercase">IDENTIFICAR GATILHOS EMOCIONAIS
+                                    AUTOMÁTICOS</h4>
+
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start gap-6 border-l-2 border-primary/20 pl-6 hover:border-primary transition-all">
+                            <span class="font-headline-md text-primary opacity-50">02</span>
+                            <div>
+                                <h4 class="font-label-caps text-white mb-2 uppercase"> TÉCNICAS DE REGULAÇÃO EMOCIONAL
+                                </h4>
+
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start gap-6 border-l-2 border-primary/20 pl-6 hover:border-primary transition-all">
+                            <span class="font-headline-md text-primary opacity-50">03</span>
+                            <div>
+                                <h4 class="font-label-caps text-white mb-2 uppercase">EXERCÍCIOS PRÁTICOS DE
+                                    AUTOCONHECIMENTO</h4>
+
+                            </div>
+                        </div>
+
+                        <div
+                            class="flex items-start gap-6 border-l-2 border-primary/20 pl-6 hover:border-primary transition-all">
+                            <span class="font-headline-md text-primary opacity-50">04</span>
+                            <div>
+                                <h4 class="font-label-caps text-white mb-2 uppercase">DIÁRIO DE PADRÕES EMOCIONAIS</h4>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 relative flex justify-center items-center py-20">
+
+                    <!-- Reference Image visual element -->
+                    <div class="absolute">
+                        <img alt="Diagram visual reference" class="w-full h-full object-contain"
+                            src="./assets/Trilha1imagem.png" />
+                    </div>
+                    <div class="absolute -z-10 opacity-10">
+                        <img alt="Diagram visual reference" class="w-full h-full object-contain"
+                            src="./assets/trilha1.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" relative z-10 flex justify-center mt-20">
+            <a href="#trilha2" class="seta-proxima">
+                <span class="material-symbols-outlined text-5xl">arrow_circle_down</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Trilha 2: Revelar Romper Restaurar -->
+
+    <section id="trilha2" class="relative py-section-gap overflow-hidden" style="padding-bottom: 300px;">
+        <div class="absolute inset-0 z-0">
+            <img alt="Trilha2 background" class="w-full h-full object-cover" src="./assets/backgroundtrilha2.png" />
+            <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-black/60 to-background/90"></div>
+        </div>
+        <div class="relative z-10">
+            <div class="flex justify-center mb-12">
+                <span
+                    class="inline-block bg-gradient-to-r from-[#8B6914] via-[#C5A059] to-[#8B6914] px-16 py-5 rounded-lg font-headline-md text-white text-2xl tracking-wide uppercase bronze-glow">
+                    TRILHA 2
+                </span>
+            </div>
+            <div class="max-w-7xl mx-auto px-container-padding">
+                <!-- resto do conteúdo -->
+            </div>
+        </div>
+        <div class="relative z-20 max-w-7xl mx-auto px-container-padding">
+            <div class="text-center mb-10">
+                <span class="font-label-caps text-primary tracking-widest uppercase">Revelar, Romper ou Restaurar</span>
+                <h2 class="font-headline-lg text-headline-lg text-white mt-4 mb-6">Clareza absoluta sobre qual caminho
+                </h2>
+                <p class="font-body-lg text-on-surface-variant mb-3 text-center">
+                    Onde a gente aprofunda na sua Bússola da Decisão. Aqui você vai ter clareza absoluta sobre qual
+                    caminho seguir, sem culpa, sem medo, sem arrependimento.
+                </p>
+                <div class="w-24 h-px bg-primary mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <!-- Revelar -->
+                <div
+                    class="rounded-md relative z-20 group p-10 border border-outline-variant/20 bg-surface-container-low hover:border-primary/50 transition-all duration-500">
+                    <div class="mb-8 text-primary">
+                        <span class="material-symbols-outlined text-5xl"
+                            style="font-variation-settings: 'FILL' 0;">visibility</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">REVELAR</h3>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed mb-6">
+                        Descobrir os padrões inconscientes que estão sabotando o seu relacionamento. Entender de onde
+                        vem a dor.
+                    </p>
+                    <ul class="space-y-3 font-label-caps text-on-surface-variant/70 text-xs">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span>
+                            BÚSSOLA DA DECISÃO</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span>
+                            MAPEAMENTO DE VALORES</li>
+                    </ul>
+                </div>
+                <!-- Romper -->
+                <div
+                    class="rounded-md relative z-20 group p-10 border border-outline-variant/20 bg-surface-container-low hover:border-primary/50 transition-all duration-500">
+                    <div class="mb-8 text-primary">
+                        <span class="material-symbols-outlined text-5xl"
+                            style="font-variation-settings: 'FILL' 0;">bolt</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">ROMPER</h3>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed mb-6">
+                        Quebrar os ciclos herdados da infância. Parar de repetir os mesmos erros.
+                    </p>
+                    <ul class="space-y-3 font-label-caps text-on-surface-variant/70 text-xs">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> QUEBRA
+                            DE PADRÕES</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span>
+                            EXERCÍCIO DE CENÁRIOS</li>
+                    </ul>
+                </div>
+                <!-- Restaurar -->
+                <div
+                    class="rounded-md group p-10 border border-outline-variant/20 bg-surface-container-low hover:border-primary/50 transition-all duration-500">
+                    <div class="mb-8 text-primary">
+                        <span class="material-symbols-outlined text-5xl"
+                            style="font-variation-settings: 'FILL' 0;">rebase_edit</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">RESTAURAR</h3>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed mb-6">
+                        Construir o framework de decisão consciente.
+                    </p>
+                    <ul class="space-y-3 font-label-caps text-on-surface-variant/70 text-xs">
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> NOVOS
+                            PILARES</li>
+                        <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> VISÃO
+                            DE FUTURO</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex justify-center mt-2">
+                <a href="#trilha3" class="seta-proxima">
+                    <span class="material-symbols-outlined text-5xl">arrow_circle_down</span>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Trilha3: The 3 Areas da vida --------------------------------------------------------------------------------------------------->
+    <section id="trilha3" class="py-section-gap overflow-hidden relative" style="padding-bottom: 300px;">
+        <div class="absolute inset-0 z-0">
+            <img alt="Trilha2 background" class="w-full h-full object-cover" src="./assets/backgroundtrilha3.png" />
+            <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-black/80 to-background/90"></div>
+        </div>
+        <div class="relative z-20 flex justify-center mb-2">
+            <span
+                class="inline-block bg-gradient-to-r from-[#8B6914] via-[#C5A059] to-[#8B6914] px-16 py-5 rounded-lg font-headline-md text-white text-2xl tracking-wide uppercase bronze-glow">
+                TRILHA 3
+            </span>
+        </div>
+
+        <div class="relative z-20 max-w-7xl mx-auto px-container-padding">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="w-full lg:w-1/2">
+                    <span class="font-label-caps text-primary uppercase text-lg">As 3 Áreas da Vida</span>
+                    <h2 class="font-headline-lg text-headline-lg text-white mt-4 mb-8">Quando uma área desmorona, as
+                        outras vão junto</h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                        Como seu relacionamento impacta sua carreira, suas finanças e sua saúde. Você vai entender por
+                        que quando uma área desmorona, as outras vão junto.
+                    </p>
+                    <div class="space-y-8">
+                        <div
+                            class="flex items-start gap-6 border-l-2 border-primary/20 pl-6 hover:border-primary transition-all">
+                            <span class="font-headline-md text-primary opacity-50">01</span>
+                            <div>
+                                <h4 class="font-label-caps text-white mb-2 uppercase">Relacionamento</h4>
+                                <p class="font-body-lg text-body-lg text-on-surface-variant mb-2">O espelho das suas
+                                    emoções e a base da
+                                    estabilidade.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start gap-6 border-l-2 border-primary/20 pl-6 hover:border-primary transition-all">
+                            <span class="font-headline-md text-primary opacity-50">02</span>
+                            <div>
+                                <h4 class="font-label-caps text-white mb-2 uppercase">Carreira / Finanças</h4>
+                                <p class="font-body-lg text-body-lg text-on-surface-variant mb-2">A manifestação do seu
+                                    valor e objetivo no mundo.
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start gap-6 border-l-2 border-primary/20 pl-6 hover:border-primary transition-all">
+                            <span class="font-headline-md text-primary opacity-50">03</span>
+                            <div>
+                                <h4 class="font-label-caps text-white mb-2 uppercase">Saúde</h4>
+                                <p class="font-body-lg text-body-lg text-on-surface-variant mb-2">O pilar que sustenta
+                                    toda a sua jornada terrestre.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 relative flex justify-center items-center py-20">
+                    <!-- Circular Diagram Representation -->
+                    <div class="relative w-80 h-80 md:w-[500px] md:h-[500px]">
+                        <div
+                            class="absolute inset-0 border-[1px] border-primary/30 rounded-full flex items-center justify-center animate-[spin_60s_linear_infinite]">
+                            <div
+                                class="absolute top-0 -translate-y-1/2 bg-background p-4 rounded-full border border-primary">
+                                <span class="material-symbols-outlined text-primary">favorite</span>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute inset-16 border-[1px] border-primary/40 rounded-full flex items-center justify-center animate-[spin_45s_linear_infinite_reverse]">
+                            <div
+                                class="absolute left-0 -translate-x-1/2 bg-background p-4 rounded-full border border-primary">
+                                <span class="material-symbols-outlined text-primary">payments</span>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute inset-32 border-[1px] border-primary/50 rounded-full flex items-center justify-center animate-[spin_30s_linear_infinite]">
+                            <div
+                                class="absolute bottom-0 translate-y-1/2 bg-background p-4 rounded-full border border-primary">
+                                <span class="material-symbols-outlined text-primary">vital_signs</span>
+                            </div>
+                        </div>
+                        <!-- Center Focus -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <p class="font-label-caps text-primary uppercase text-[10px] tracking-widest">Sua</p>
+                                <div class="font-headline-md text-white">VIDA</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Reference Image visual element -->
+                    <div class="absolute -z-10 opacity-10">
+                        <img alt="Diagram visual reference" class="w-full h-full object-contain"
+                            src="./assets/trilha3.png" />
+                    </div>
+                </div>
+                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden lg:block">
+                    <a href="#trilha4" class="seta-proxima">
+                        <span class="material-symbols-outlined text-5xl">arrow_circle_down</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Trilha 4: Manual dos Traços ------------------------------------------------------------------------------------------------->
+
+    <section id="trilha4" class="relative py-section-gap overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img alt="Trilha4 background" class="w-full h-full object-cover" src="./assets/backgroundtrilha4.png" />
+            <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-black/80 to-background/90"></div>
+        </div>
+
+        <div class="relative z-20">
+            <div class="flex justify-center mb-12">
+                <span
+                    class="inline-block bg-gradient-to-r from-[#8B6914] via-[#C5A059] to-[#8B6914] px-16 py-5 rounded-lg font-headline-md text-white text-2xl tracking-wide uppercase bronze-glow">
+                    TRILHA 4
+                </span>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-container-padding flex flex-col md:flex-row items-center gap-20">
+                <div class="w-full md:w-1/2">
+                    <div class="max-w-lg relative p-1 border border-outline-variant/30">
+                        <img alt="Person reflecting" class="w-full h-auto" src="./assets/trilha4.png" />
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <span class="font-label-caps text-primary tracking-widest mb-4 block">O Manual dos Traços</span>
+                    <h2 class="font-headline-lg text-headline-lg mb-8">O Manual de instruções de você e do seu parceiro
+                    </h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                        Um mergulho profundo no seu manual de instruções e no do seu parceiro. Aqui você vai aparender a
+                        ler
+                        a si mesma e ao outro como nunca antes.
+                    </p>
+                    <div class="flex items-end justify-between h-48 w-full gap-4  border-outline-variant/50 pb-2">
+                        <img alt="Person reflecting" class="w-full h-auto" src="./assets/traços.png" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden lg:block">
+                <a href="#trilha5" class="seta-proxima">
+                    <span class="material-symbols-outlined text-5xl">arrow_circle_down</span>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Trilha5 : Body Analysis Patterns ----------------------------------------------------------------------------------->
+
+    <section id="trilha5" class="relative py-section-gap overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img alt="Trilha5 background" class="w-full h-full object-cover" src="./assets/backgroundtrilha5.png" />
+            <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-black/80 to-background/90"></div>
+        </div>
+
+        <div class="relative z-20 px-container-padding max-w-7xl mx-auto">
+            <div class="flex justify-center">
+                <span
+                    class="inline-block bg-gradient-to-r from-[#8B6914] via-[#C5A059] to-[#8B6914] px-16 py-5 rounded-lg font-headline-md text-white text-2xl tracking-wide uppercase bronze-glow">
+                    TRILHA 5
+                </span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+                <div class="md:col-span-4 sticky top-32">
+                    <h2 class="font-label-caps text-primary tracking-widest mb-4 block">Lidando com Recaídas</h2>
+                    <h3 class="font-headline-lg text-headline-lg mb-8">A Jornada Real tem altos e baixos</h3>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                        Porque a jornada real tem altos e baixos. Aqui você vai aprender a não desistir de si mesma
+                        quando a vida apertar.
+                    </p>
+
+                    <div class="md:col-span-8 space-y-10">
+                        <div class="relative border-outline-variant/30 w-3/4">
+                            <img alt="Person reflecting" class="w-full h-auto border-none"
+                                src="./assets/graficotrilha52.png" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-end md:col-span-8 space-y-10">
+                    <div class="relative border-outline-variant/30 w-3/4">
+                        <img alt="marcio-trilha5" class="w-full h-auto" src="./assets/trilha5imagem.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-20 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden lg:block">
+                <a href="#mentor" class="seta-proxima">
+                    <span class="material-symbols-outlined text-5xl">arrow_circle_down</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mentor Márcio Section -->
+
+    <section id="mentor" class="py-10 bg-surface-container-low overflow-hidden">
+        <div class="max-w-7xl mx-auto px-container-padding grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div class="relative order-2 md:order-1">
+                <div class="aspect-[4/5] overflow-visible border border-outline-variant/30 img-glow-container">
+                    <img id="mentorImage" alt="Márcio Conceição"
+                        class="w-full h-full object-cover grayscale transition-all duration-1000"
+                        src="./assets/marcio.jpg" />
+                </div>
+                <!-- Decorative Element -->
+                <div class="absolute -z-10 -bottom-10 -left-10 w-64 h-64 border border-primary/20"></div>
+            </div>
+            <div class="order-1 md:order-2">
+                <span class="font-label-caps text-primary tracking-[0.3em] block uppercase">O Mentor por trás da
+                    sua Transformação</span>
+                <h2 class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-display-lg text-white mb-2">
+                    Muito prazer, <span class="text-primary italic"><br>Márcio Conceição.</span>
+                </h2>
+                <div class="w-16 h-1 bg-primary"></div>
+                <p class="font-body-lg text-on-surface-variant leading-relaxed">
+                    Sou analista corporal e mentor de relacionamentos. Em mais de 3.960 horas de consultório, vi
+                    centenas de casais prestes a assinar o divórcio encontrarem o caminho de volta para casa usando
+                    exatamente o método que vou te ensinar neste programa.
+                </p>
+                <div
+                    class="flex items-center gap-6 border-l-4 border-primary pl-8 py-6 bg-gradient-to-r from-surface-container-high/40 to-transparent">
+                    <div>
+                        <span class="font-headline-lg text-6xl text-primary font-bold">+3.960h</span>
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <span
+                            class="font-label-caps text-on-surface text-[11px] tracking-[0.2em] uppercase font-bold">De
+                            Consultório</span>
+                        <span
+                            class="font-label-caps text-on-surface text-[11px] tracking-[0.2em] uppercase font-bold">Com
+                            Casais Reais</span>
+                    </div>
+                </div>
+                <p class="font-body-lg text-on-surface-variant mb-10 leading-relaxed">
+                    O que eu faço não é sobre descobrir quem tem razão na briga. É sobre mapear a sua mente e a mente do
+                    seu parceiro para que vocês entendam qual engrenagem oculta está travando a relação.
+                    <br>
+                    <br>
+                    Meu objetivo é simples: devolver a clareza e a paz para o seu casamento, atacando a raiz do
+                    problema, e não apenas os sintomas.
+                </p>
+
+                <a onclick="openVideoModal()"
+                    class="rounded-md border border-primary text-primary font-label-caps px-8 py-4  hover:bg-primary hover:text-on-primary-fixed transition-all duration-300 uppercase tracking-widest bronze-glow cursor-pointer">
+                    Conhecer Trajetória
+                </a>
+            </div>
+
+        </div>
+        <div class="absolute bottom-20 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hidden lg:block">
+            <a href="#depoimentos" class="seta-proxima">
+                <span class="material-symbols-outlined text-5xl">arrow_circle_down</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section id="depoimentos" class="py-10 bg-surface-container-lowest overflow-hidden">
+        <div class="max-w-7xl mx-auto px-container-padding">
+            <div class="max-w-4xl mx-auto px-container-padding text-center relative z-10">
+                <h2 class="font-display-lg text-headline-lg text-white mb-6 uppercase tracking-tight">CONHEÇA QUEM JÁ
+                    <br /><span class="text-primary italic">TRANSFORMOU SUA PRÓPRIA HISTÓRIA</span>
+                </h2>
+            </div>
+
+
+            <!-- Carrossel Container -->
+            <div class="relative">
+                <!-- Botão Anterior -->
+                <button onclick="prevTestimonial()"
+                    class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-primary/80 hover:bg-primary text-black w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110 -ml-6">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+
+                <!-- Carrossel -->
+                <div id="testimonialCarousel"
+                    class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-8 scrollbar-hide cursor-grab active:cursor-grabbing">
+
+                    <!-- Depoimento 1 -->
+                    <div class="testimonial-card min-w-[300px] md:min-w-[400px] snap-center group">
+                        <div onclick="openTestimonialVideo('w6jR2CDQrfw')"
+                            class="relative aspect-[9/16] rounded-lg overflow-hidden border-2 border-outline-variant/30 hover:border-primary transition-all cursor-pointer">
+                            <!-- Thumbnail -->
+                            <img src="./assets/depoimento1-thumb.png" alt="Depoimento Casal Live"
+                                class="w-full h-full object-cover">
+                            <!-- Overlay -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/50 flex flex-col justify-end p-6">
+                                <div
+                                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined text-5xl text-black">play_arrow</span>
+                                </div>
+                                <h3 class="font-headline-md text-white text-xl mb-2">Casal Live</h3>
+                                <p class="text-on-surface-variant text-sm">Leveza e felicidade no casamento</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 2 -->
+                    <div class="testimonial-card min-w-[300px] md:min-w-[400px] snap-center group">
+                        <div onclick="openTestimonialVideo('nIXB7xq2JQc')"
+                            class="relative aspect-[9/16] rounded-lg overflow-hidden border-2 border-outline-variant/30 hover:border-primary transition-all cursor-pointer">
+                            <!-- Thumbnail -->
+                            <img src="./assets/depoimento2-thumb.png" alt="Depoimento Aline"
+                                class="w-full h-full object-cover">
+                            <!-- Overlay -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/50 flex flex-col justify-end p-6">
+                                <div
+                                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined text-5xl text-black">play_arrow</span>
+                                </div>
+                                <h3 class="font-headline-md text-white text-xl mb-2">Aline</h3>
+                                <p class="text-on-surface-variant text-sm">Transformador na história da minha vida</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 3 -->
+                    <div class="testimonial-card min-w-[300px] md:min-w-[400px] snap-center group">
+                        <div onclick="openTestimonialVideo('vUiSpST-QGU')"
+                            class="relative aspect-[9/16] rounded-lg overflow-hidden border-2 border-outline-variant/30 hover:border-primary transition-all cursor-pointer">
+                            <!-- Thumbnail -->
+                            <img src="./assets/depoimento3-thumb.png" alt="Depoimento Thiago e Rafaela"
+                                class="w-full h-full object-cover">
+                            <!-- Overlay -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/50 flex flex-col justify-end p-6">
+                                <div
+                                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined text-5xl text-black">play_arrow</span>
+                                </div>
+                                <h3 class="font-headline-md text-white text-xl mb-2">Thiago e Rafaela</h3>
+                                <p class="text-on-surface-variant text-sm">Clareza e direção que fizeram diferença</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 4 -->
+                    <div class="testimonial-card min-w-[300px] md:min-w-[400px] snap-center group">
+                        <div onclick="openTestimonialVideo('sXtVrh-wm7I')"
+                            class="relative aspect-[9/16] rounded-lg overflow-hidden border-2 border-outline-variant/30 hover:border-primary transition-all cursor-pointer">
+                            <!-- Thumbnail -->
+                            <img src="./assets/depoimento4-thumb.png" alt="Depoimento Eduardo"
+                                class="w-full h-full object-cover">
+                            <!-- Overlay -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/50 flex flex-col justify-end p-6">
+                                <div
+                                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined text-5xl text-black">play_arrow</span>
+                                </div>
+                                <h3 class="font-headline-md text-white text-xl mb-2">Eduardo</h3>
+                                <p class="text-on-surface-variant text-sm">Quinze passos que mudaram tudo</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 5 -->
+                    <div class="testimonial-card min-w-[300px] md:min-w-[400px] snap-center group">
+                        <div onclick="openTestimonialVideo('aKNBkULpdXs')"
+                            class="relative aspect-[9/16] rounded-lg overflow-hidden border-2 border-outline-variant/30 hover:border-primary transition-all cursor-pointer">
+                            <!-- Thumbnail -->
+                            <img src="./assets/depoimento5-thumb.png" alt="Depoimento Thaís"
+                                class="w-full h-full object-cover">
+                            <!-- Overlay -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/50 flex flex-col justify-end p-6">
+                                <div
+                                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined text-5xl text-black">play_arrow</span>
+                                </div>
+                                <h3 class="font-headline-md text-white text-xl mb-2">Thaís</h3>
+                                <p class="text-on-surface-variant text-sm">Leveza no ambiente no pouco aplicado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botão Próximo -->
+                <button onclick="nextTestimonial()"
+                    class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-primary/80 hover:bg-primary text-black w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110 -mr-6">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+
+    <section class="py-section-gap relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div
+                class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent">
+            </div>
+        </div>
+        <div class="container mx-auto px-gutter max-w-4xl text-center relative z-10">
+            <h2 class="font-headline-lg text-headline-lg mb-8">Pronto para a sua transformação?</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-12">Preencha o formulário para nosso time
+                entrar em contato e garanta seu lugar na jornada de transformação definitiva.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="https://form.respondi.app/eW9PPMu8" target="_blank"
+                    class=" rounded-md bg-primary text-on-primary px-10 py-5 font-label-caps text-label-caps uppercase bronze-glow transition-all">Agendar
+                    Sessão Estratégica</a>
+                <a href="https://wa.me/5512997621990" target="_blank"
+                    class="rounded-md border border-outline text-on-surface px-10 py-5 font-label-caps text-label-caps uppercase hover:border-primary transition-all">Falar
+                    com Suporte</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer id="footer"
+        class="w-full px-gutter pt-12 pb-12 flex flex-col md:flex-row justify-between items-start gap-base border-t border-outline-variant">
+    </footer>
+    <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-container-padding max-w-7xl mx-auto font-body-md text-body-md">
+        <div class="col-span-1 md:col-span-1">
+            <span
+                class="font-display-lg text-headline-md text-primary dark:text-primary uppercase mb-6 block">COMPATÍVEIS</span>
+            <p class="text-on-surface-variant/70 leading-relaxed">
+                Transformando o seu relacionamento e dando clareza para tomar a melhor decisão da sua vida.
+            </p>
+        </div>
+        <div class="flex flex-col gap-4">
+            <h4 class="font-label-caps text-white uppercase mb-2">Plataforma</h4>
+            <a class="text-on-surface-variant hover:text-primary hover:underline hover:decoration-primary hover:underline-offset-4 transition-all"
+                href="#">Home</a>
+            <a class="text-on-surface-variant hover:text-primary hover:underline hover:decoration-primary hover:underline-offset-4 transition-all"
+                href="#programa">Compatíveis</a>
+            <a class="text-on-surface-variant hover:text-primary hover:underline hover:decoration-primary hover:underline-offset-4 transition-all"
+                href="/marcio.html">Mentor</a>
+        </div>
+        <div class="flex flex-col gap-4">
+            <h4 class="font-label-caps text-white uppercase mb-2">Legal</h4>
+            <a class="text-on-surface-variant hover:text-primary hover:underline hover:decoration-primary hover:underline-offset-4 transition-all"
+                href="#">Termos de uso</a>
+            <a class="text-on-surface-variant hover:text-primary hover:underline hover:decoration-primary hover:underline-offset-4 transition-all"
+                href="#">Política de privacidade</a>
+            <a class="text-on-surface-variant hover:text-primary hover:underline hover:decoration-primary hover:underline-offset-4 transition-all"
+                href="#">Política de cookies</a>
+        </div>
+        <div class="flex flex-col gap-4 ">
+            <h4 class="font-label-caps text-white uppercase mb-2">Contato</h4>
+            <p class="text-on-surface-variant/70">contato@marcioconceicao.com.br</p>
+            <div class="flex gap-4 mt-2 icones-sociais">
+                <!-- Instagram -->
+                <a class="text-primary hover:scale-110 transition-transform"
+                    href="https://www.instagram.com/marcioaconceicao/" target="_blank">
+                    <span class="material-symbols-outlined">photo_camera</span>
+                </a>
+
+                <!-- YouTube -->
+                <a class="text-primary hover:scale-110 transition-transform"
+                    href="https://www.youtube.com/@marcioaconceicao" target="_blank">
+                    <span class="material-symbols-outlined">play_circle</span>
+                </a>
+
+                <!-- Facebook -->
+                <a class="text-primary hover:scale-110 transition-transform"
+                    href="https://www.facebook.com/marcioconceicao.com.br" target="_blank">
+                    <span class="material-symbols-outlined">thumb_up</span>
+                </a>
+
+                <!-- WhatsApp -->
+                <a class="text-primary hover:scale-110 transition-transform" href="https://wa.me/5512997621990"
+                    target="_blank">
+                    <span class="material-symbols-outlined">chat</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-container-padding mt-24 p-8 border-t border-outline-variant/10 text-center">
+        <p class="text-on-surface-variant/40 text-xs uppercase font-label-caps tracking-widest">
+            © 2026 Márcio Conceição - Todos os direitos reservados.
+        </p>
+    </div>
+    </footer>
+
+    <!-- Modal de Vídeo do Mentor (YouTube) -->
+    <div id="videoModal"
+        class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] hidden items-center justify-center p-4">
+        <div class="relative w-full max-w-5xl">
+            <!-- Botão Fechar -->
+            <button onclick="closeVideoModal()"
+                class="absolute -top-16 right-0 text-white hover:text-primary transition-all flex items-center gap-2">
+                <span class="font-label-caps text-sm uppercase">Fechar</span>
+                <span class="material-symbols-outlined text-5xl">close</span>
+            </button>
+            <!-- Container do Vídeo -->
+            <div class="relative pt-[56.25%]">
+                <iframe id="videoPlayer" class="absolute inset-0 w-full h-full rounded-lg" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Vídeo Depoimento (YouTube) -->
+    <div id="testimonialVideoModal" class="fixed inset-0 bg-black/90 backdrop-blur-sm z-[100] hidden">
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div class="relative w-full max-w-xl md:max-w-2xl">
+                <button onclick="closeTestimonialVideo()"
+                    class="absolute -top-16 right-0 text-white hover:text-primary transition-all flex items-center gap-2 z-10">
+                    <span class="font-label-caps text-sm uppercase">Fechar</span>
+                    <span class="material-symbols-outlined text-5xl">close</span>
+                </button>
+                <div class="relative aspect-[9/16] max-h-[80vh] mx-auto">
+                    <iframe id="testimonialVideoFrame" class="w-full h-full rounded-lg" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Informações -->
+    <div id="infoModal"
+        class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] hidden items-center justify-center p-4">
+        <div class="relative w-full max-w-3xl bg-surface-container-high border border-primary/30 rounded-lg">
+            <!-- Botão Fechar -->
+            <button onclick="closeInfoModal()"
+                class="absolute -top-4 -right-4 bg-primary text-black w-10 h-10 rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+
+            <!-- Conteúdo do Modal -->
+            <div class="p-8 md:p-12">
+                <!-- Título dinâmico -->
+                <div class="mb-8">
+                    <span class="font-label-caps text-primary text-xs tracking-widest uppercase">Detalhes</span>
+                    <h3 id="infoModalTitle" class="font-headline-lg text-3xl text-white mt-2 mb-6"></h3>
+                    <div class="w-16 h-px bg-primary"></div>
+                </div>
+
+                <!-- Conteúdo dinâmico -->
+                <div id="infoModalContent" class="font-body-lg text-on-surface-variant space-y-4">
+                    <!-- Conteúdo será inserido via JavaScript -->
+                </div>
+
+                <!-- Botão de ação -->
+                <div class="mt-8 flex gap-4">
+                    <a href="https://form.respondi.app/eW9PPMu8" target="_blank"
+                        class="bg-primary text-black px-8 py-4 font-label-caps uppercase bronze-glow transition-all hover:scale-105">
+                        QUERO PARTICIPAR
+                    </a>
+                    <button onclick="closeInfoModal()"
+                        class="border border-outline text-on-surface-variant px-8 py-4 font-label-caps uppercase hover:border-primary hover:text-primary transition-all">
+                        VOLTAR
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        // ==================== MENU MOBILE LATERAL ====================
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const overlay = document.getElementById('mobileMenuOverlay');
+            const body = document.body;
+
+            if (menu.classList.contains('active')) {
+                menu.classList.remove('active');
+                overlay.classList.remove('active');
+                body.classList.remove('menu-open');
+            } else {
+                menu.classList.add('active');
+                overlay.classList.add('active');
+                body.classList.add('menu-open');
+            }
+        }
+
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const overlay = document.getElementById('mobileMenuOverlay');
+            const body = document.body;
+
+            menu.classList.remove('active');
+            overlay.classList.remove('active');
+            body.classList.remove('menu-open');
+        }
+
+        // Event Listeners
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const closeMobileMenuBtn = document.getElementById('closeMobileMenu');
+            const overlay = document.getElementById('mobileMenuOverlay');
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+            }
+
+            if (closeMobileMenuBtn) {
+                closeMobileMenuBtn.addEventListener('click', closeMobileMenu);
+            }
+
+            // Fechar ao clicar no overlay
+            if (overlay) {
+                overlay.addEventListener('click', closeMobileMenu);
+            }
+
+            // Fechar ao pressionar ESC
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    closeMobileMenu();
+                }
+            });
+        });
+        // ==================== DEPOIMENTOS (YouTube) ====================
+        function openTestimonialVideo(videoId) {
+            console.log('🎬 Abrindo vídeo:', videoId);
+
+            const modal = document.getElementById('testimonialVideoModal');
+            const iframe = document.getElementById('testimonialVideoFrame');
+
+            if (!modal || !iframe) {
+                console.error('❌ Modal ou iframe não encontrado!');
+                return;
+            }
+
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=1&modestbranding=1&rel=0`;
+            modal.style.display = 'block';
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+
+            console.log('✅ Modal aberto!');
+        }
+
+        function closeTestimonialVideo() {
+            const modal = document.getElementById('testimonialVideoModal');
+            const iframe = document.getElementById('testimonialVideoFrame');
+
+            if (iframe) iframe.src = '';
+            if (modal) {
+                modal.style.display = 'none';
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // ==================== VÍDEO DO MENTOR ====================
+        function openVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('videoPlayer');
+
+            if (!modal || !iframe) return;
+
+            iframe.src = 'https://www.youtube.com/embed/hX9GLWlM0cY?autoplay=1&controls=1&modestbranding=1&rel=0';
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('videoPlayer');
+
+            if (iframe) iframe.src = '';
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // ==================== MODAL DE INFORMAÇÕES ====================
+        const infoContent = {
+            'encontros': {
+                title: '12 Encontros ao Vivo',
+                content: `
+                <p><strong class="text-primary">1 encontro por mês durante 12 meses</strong></p>
+                <p>Encontros online ao vivo onde você terá acesso direto ao Márcio Conceição.</p>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li>Direcionamento personalizado</li>
+                    <li>Acesso por 12 meses</li>
+                    <li>Gravação disponível</li>
+                    <li>Traga seu caso específico</li>
+                    <li>Receba orientação do Márcio</li>
+                    <li>2 encontros mensais</li>
+                    <li>Assista quando quiser</li>
+                </ul>
+                <p class="mt-4 text-primary italic">E você poderá tirar suas dúvidas em tempo real.</p>
+            `
+            },
+            'comunidade': {
+                title: 'Comunidade Exclusiva',
+                content: `
+                <p><strong class="text-primary">Você nunca mais vai se sentir sozinho</strong></p>
+                <p>Um lugar seguro, sem julgamentos, onde você vai poder compartilhar suas dores e suas vitórias com pessoas que estão na mesma jornada.</p>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li>Moderação profissional</li>
+                    <li>Conteúdo exclusivo semanal</li>
+                    <li>Suporte entre membros</li>
+                    <li>Desafios e atividades em grupo</li>
+                </ul>
+                <p class="mt-4 text-primary italic">Ambiente seguro e livre de julgamentos</p>
+            `
+            },
+            'bonus': {
+                title: 'Masterclass Bônus',
+                content: `
+                <p><strong class="text-primary">4 bônus exclusivos de masterclass</strong></p>
+                <p>Conteúdos complementares para acelerar sua transformação e aprofundar conhecimentos específicos.</p>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li><strong>Bônus 1:</strong> Masterclass: As 10 Maneiras de salvar o seu casamento</li>
+                    <li><strong>Bônus 2:</strong> Semana da criança ferida</li>
+                    <li><strong>Bônus 3:</strong> Curso Homem de Valor</li>
+                    <li><strong>Bônus 4:</strong> O Desafio da Dívida Invisível</li>
+                </ul>
+                <p class="mt-4 text-primary italic">Valor total dos bônus: R$ 12.997,97</p>
+            `
+            }
+        };
+
+        function openInfoModal(type) {
+            const modal = document.getElementById('infoModal');
+            const title = document.getElementById('infoModalTitle');
+            const content = document.getElementById('infoModalContent');
+
+            if (infoContent[type]) {
+                title.textContent = infoContent[type].title;
+                content.innerHTML = infoContent[type].content;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeInfoModal() {
+            const modal = document.getElementById('infoModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // ==================== FECHAR COM ESC ====================
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeVideoModal();
+                closeTestimonialVideo();
+                closeInfoModal();
+            }
+        });
+
+        // ==================== SCROLL SUAVE ====================
+        function smoothScrollTo(target, duration = 1200) {
+            const targetElement = document.querySelector(target);
+            if (!targetElement) return;
+
+            const navbarHeight = 20;
+            const extraOffset = 40;
+            const viewportHeight = window.innerHeight;
+            const elementHeight = targetElement.offsetHeight;
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight - extraOffset;
+            const centerOffset = (viewportHeight - elementHeight) / 2;
+            const finalPosition = targetPosition - Math.max(centerOffset, navbarHeight);
+            const startPosition = window.pageYOffset;
+            const distance = finalPosition - startPosition;
+            let startTime = null;
+
+            function easeInOutCubic(t) {
+                return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+            }
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const progress = Math.min(timeElapsed / duration, 1);
+                const ease = easeInOutCubic(progress);
+                window.scrollTo(0, startPosition + distance * ease);
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(animation);
+                }
+            }
+
+            requestAnimationFrame(animation);
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#' || targetId === '') return;
+                e.preventDefault();
+                smoothScrollTo(targetId, 1000);
+            });
+        });
+
+        // ==================== BOTÃO VOLTAR ====================
+        const btnVoltar = document.querySelector('.btn-voltar');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 2900) {
+                btnVoltar.style.opacity = '1';
+                btnVoltar.style.visibility = 'visible';
+            } else {
+                btnVoltar.style.opacity = '0';
+                btnVoltar.style.visibility = 'hidden';
+            }
+        });
+
+        // ==================== ANIMAÇÃO IMAGEM MENTOR ====================
+        document.addEventListener('DOMContentLoaded', function () {
+            const mentorImage = document.getElementById('mentorImage');
+            const mentorSection = document.getElementById('mentor');
+
+            if (mentorImage && mentorSection) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            setTimeout(() => {
+                                mentorImage.classList.remove('grayscale', 'opacity-0');
+                                mentorImage.classList.add('opacity-100');
+                            }, 200);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                observer.observe(mentorSection);
+            }
+        });
+
+        // ==================== FECHAR MODAIS CLICANDO FORA ====================
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('testimonialVideoModal')?.addEventListener('click', function (e) {
+                if (e.target === this) closeTestimonialVideo();
+            });
+
+            document.getElementById('videoModal')?.addEventListener('click', function (e) {
+                if (e.target === this) closeVideoModal();
+            });
+
+            document.getElementById('infoModal')?.addEventListener('click', function (e) {
+                if (e.target === this) closeInfoModal();
+            });
+        });
+
+        // ==================== CARROSSEL ====================
+        let isDown = false;
+        let startX, scrollLeft, velocity = 0, momentum = 0;
+        const carousel = document.getElementById('testimonialCarousel');
+
+        if (carousel) {
+            carousel.addEventListener('mousedown', (e) => {
+                isDown = true;
+                carousel.style.scrollBehavior = 'auto';
+                startX = e.pageX - carousel.offsetLeft;
+                scrollLeft = carousel.scrollLeft;
+                velocity = 0;
+            });
+
+            carousel.addEventListener('mouseleave', () => {
+                isDown = false;
+                applyMomentum();
+            });
+
+            carousel.addEventListener('mouseup', () => {
+                isDown = false;
+                applyMomentum();
+            });
+
+            carousel.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - carousel.offsetLeft;
+                const walk = (x - startX) * 1.0;
+                velocity = walk - momentum;
+                momentum = walk;
+                carousel.scrollLeft = scrollLeft - walk;
+            });
+
+            let touchStartX = 0, touchScrollLeft = 0, lastTouch = 0;
+
+            carousel.addEventListener('touchstart', (e) => {
+                carousel.style.scrollBehavior = 'auto';
+                touchStartX = e.touches[0].pageX - carousel.offsetLeft;
+                touchScrollLeft = carousel.scrollLeft;
+                lastTouch = e.touches[0].pageX;
+                velocity = 0;
+            }, { passive: true });
+
+            carousel.addEventListener('touchmove', (e) => {
+                const x = e.touches[0].pageX - carousel.offsetLeft;
+                const walk = (x - touchStartX) * 1.2;
+                velocity = x - lastTouch;
+                lastTouch = x;
+                carousel.scrollLeft = touchScrollLeft - walk;
+            }, { passive: true });
+
+            carousel.addEventListener('touchend', () => {
+                applyMomentum();
+            }, { passive: true });
+
+            function applyMomentum() {
+                carousel.style.scrollBehavior = 'smooth';
+                if (Math.abs(velocity) > 1) {
+                    carousel.scrollLeft -= velocity * 5;
+                }
+            }
+        }
+
+        function nextTestimonial() {
+            const carousel = document.getElementById('testimonialCarousel');
+            carousel.style.scrollBehavior = 'smooth';
+            const cardWidth = carousel.querySelector('.testimonial-card').offsetWidth;
+            carousel.scrollBy({ left: cardWidth + 24, behavior: 'smooth' });
+        }
+
+        function prevTestimonial() {
+            const carousel = document.getElementById('testimonialCarousel');
+            carousel.style.scrollBehavior = 'smooth';
+            const cardWidth = carousel.querySelector('.testimonial-card').offsetWidth;
+            carousel.scrollBy({ left: -(cardWidth + 24), behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+
+</html>
