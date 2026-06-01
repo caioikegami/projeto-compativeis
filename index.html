@@ -177,49 +177,55 @@
     </nav>
     <!-- Hero Section -->
     <main>
-        <section class="relative min-h-screen bg-background flex items-center overflow-hidden">
+       <section class="relative w-full min-h-screen bg-[#030405] flex items-center justify-center overflow-hidden shadow-[0_0_20px_rgba(3,4,5,0.3)]">
 
-            <!-- CAMADA 0: A IMAGEM DE FUNDO -->
-            <!-- Esticada para cobrir tudo, alinhada à direita para focar no rosto -->
-            <div class="absolute inset-0 z-0">
-                <img alt="Márcio Conceição" class="w-full h-full object-cover object-right"
-                    src="./assets/marcio2.jpg" />
+    <!-- CAMADA DA IMAGEM: Alinhada à direita e colada na base (Fora do container de texto) -->
+    <div class="absolute bottom-0 right-0 w-full  h-[80%] md:h-full flex items-end justify-end pointer-events-none">
+        <img 
+            alt="Márcio Conceição" 
+            class="max-w-full h-full object-contain object-bottom md:object-right-bottom bg-[#030405]" 
+            src="./assets/marcio2.jpg" 
+        />
+        <!-- Máscara de degradê para sumir com as bordas da foto no fundo preto -->
+        <!-- Máscara de degradê adaptada para sumir com as bordas da foto sem apagar o Márcio -->
+              <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#030405] via-[#030405] "></div>
+
+    </div>
+
+    <!-- CONTAINER PRINCIPAL: Mantém seus textos e botões perfeitamente alinhados -->
+    <div class="w-full  mx-auto px-8 md:px-20 z-20 pointer-events-none">
+
+        <!-- LADO ESQUERDO: Bloco de conteúdo (Texto e Botões) -->
+        <div class="w-full md:w-1/2 pointer-events-auto">
+            <h1 class="font-display-lg text-[48px] md:text-[60px] leading-tight text-on-background">
+                Seu relacionamento chegou no <span class="italic text-primary">limite?</span>
+            </h1>
+            <h2 class="font-headline-lg text-headline-lg text-primary text-2xl md:text-3xl mt-2">
+                Ele pode ser salvo.
+            </h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mt-6">
+                Tenha uma análise profunda que já reconstruiu mais de <span class="text-primary font-bold">145
+                    relacionamentos</span>. Descubra a verdade oculta e transforme seu destino
+                emocional.
+            </p>
+            
+            <!-- Botões de Ação -->
+            <div class="pt-8 flex flex-col sm:flex-row gap-4">
+                <a href="#produtos"
+                    class="bg-primary-container text-on-primary-container px-10 py-4 font-label-caps text-label-caps hover:shadow-[0_0_20px_rgba(197,160,89,0.3)] transition-all rounded-md text-center">
+                    Conhecer possibilidades
+                </a>
+                <a href="./marcio.html"
+                    class="border border-primary text-primary px-10 py-4 font-label-caps text-label-caps hover:shadow-[0_0_20px_rgba(197,160,89,0.3)] transition-colors flex items-center justify-center gap-2 rounded-md text-center">
+                    O Mentor
+                </a>
             </div>
+        </div>
 
-            <!-- CAMADA 1: O GRADIENTE -->
-            <!-- Sobrepõe a imagem para escurecer a área do texto -->
-            <div class="absolute inset-0 z-10 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+    </div>
+</section>
 
-            <!-- CAMADA 2: O CONTEÚDO -->
-            <!-- Container que centraliza o texto na área visível -->
-            <div class="relative z-20 w-full max-w-7xl mx-auto px-gutter">
 
-                <!-- Bloco de texto com largura máxima para boa legibilidade -->
-                <div class="max-w-xl space-y-6">
-                    <h1 class="font-display-lg text-display-lg md:text-[80px] leading-tight text-on-background">
-                        Seu relacionamento chegou no <span class="italic text-primary">limite?</span>
-                    </h1>
-                    <h2 class="font-headline-lg text-headline-lg text-primary">
-                        Ele pode ser salvo.
-                    </h2>
-                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
-                        Tenha uma análise profunda que já reconstruiu mais de <span class="text-primary font-bold">145
-                            relacionamentos</span>. Descubra a verdade oculta e transforme seu destino
-                        emocional.
-                    </p>
-                    <div class="pt-8 flex flex-col sm:flex-row gap-4">
-                        <a href="#produtos"
-                            class="bg-primary-container text-on-primary-container px-10 py-4 font-label-caps text-label-caps hover:shadow-[0_0_20px_rgba(197,160,89,0.3)] transition-all rounded-md">
-                            Conhecer possibilidades
-                        </a>
-                        <a href="./marcio.html"
-                            class="border border-primary text-primary px-10 py-4 font-label-caps text-label-caps hover:bg-primary/10 transition-colors flex items-center justify-center gap-2 rounded-md">
-                            O Mentor
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
         <!-- Digital Products Carousel Section -->
         <section id="produtos" class="py-section-gap bg-surface-container-lowest overflow-hidden">
             <div class="container mx-auto px-gutter">
