@@ -132,6 +132,48 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(197, 160, 89, 0.1);
         }
+
+        /* Botão Whatsapp Fixo */
+
+        .btn-whatsapp {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 1px 1px 2px #888;
+            z-index: 1000;
+        }
+
+        .btn-whatsapp:hover {
+            transform: scale(1.1);
+            /* Dá um leve aumento no tamanho */
+        }
+
+        .fa-whatsapp {
+            margin-top: 16px;
+        }
+
+        @keyframes glow-pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 50px rgba(255, 215, 0, 0.7);
+            }
+        }
+
+        .animate-glow {
+            animation: glow-pulse 2s ease-in-out infinite;
+        }
     </style>
 </head>
 
@@ -177,53 +219,59 @@
     </nav>
     <!-- Hero Section -->
     <main>
-       <section class="relative w-full min-h-screen bg-[#030405] flex items-center justify-center overflow-hidden shadow-[0_0_20px_rgba(3,4,5,0.3)]">
 
-    <!-- CAMADA DA IMAGEM: Alinhada à direita e colada na base (Fora do container de texto) -->
-    <div class="absolute bottom-0 right-0 w-full  h-[80%] md:h-full flex items-end justify-end pointer-events-none">
-        <img 
-            alt="Márcio Conceição" 
-            class="max-w-full h-full object-contain object-bottom md:object-right-bottom bg-[#030405]" 
-            src="./assets/marcio2.jpg" 
-        />
-        <!-- Máscara de degradê para sumir com as bordas da foto no fundo preto -->
-        <!-- Máscara de degradê adaptada para sumir com as bordas da foto sem apagar o Márcio -->
-              <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#030405] via-[#030405] "></div>
+        <!-- Botão Whatsapp Fixo -->
+        <a class="btn-whatsapp" href="https://wa.me/5512997621990" target="_blank" rel="noopener noreferrer">
+            <img src="./assets/whatsapp.png" alt="Contato WhatsApp">
+        </a>
 
-    </div>
 
-    <!-- CONTAINER PRINCIPAL: Mantém seus textos e botões perfeitamente alinhados -->
-    <div class="w-full  mx-auto px-8 md:px-20 z-20 pointer-events-none">
+        <section
+            class="relative w-full min-h-screen bg-[#030405] flex items-center justify-center overflow-hidden shadow-[0_0_20px_rgba(3,4,5,0.3)]">
 
-        <!-- LADO ESQUERDO: Bloco de conteúdo (Texto e Botões) -->
-        <div class="w-full md:w-1/2 pointer-events-auto">
-            <h1 class="font-display-lg text-[48px] md:text-[60px] leading-tight text-on-background">
-                Seu relacionamento chegou no <span class="italic text-primary">limite?</span>
-            </h1>
-            <h2 class="font-headline-lg text-headline-lg text-primary text-2xl md:text-3xl mt-2">
-                Ele pode ser salvo.
-            </h2>
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mt-6">
-                Tenha uma análise profunda que já reconstruiu mais de <span class="text-primary font-bold">145
-                    relacionamentos</span>. Descubra a verdade oculta e transforme seu destino
-                emocional.
-            </p>
-            
-            <!-- Botões de Ação -->
-            <div class="pt-8 flex flex-col sm:flex-row gap-4">
-                <a href="#produtos"
-                    class="bg-primary-container text-on-primary-container px-10 py-4 font-label-caps text-label-caps hover:shadow-[0_0_20px_rgba(197,160,89,0.3)] transition-all rounded-md text-center">
-                    Conhecer possibilidades
-                </a>
-                <a href="./marcio.html"
-                    class="border border-primary text-primary px-10 py-4 font-label-caps text-label-caps hover:shadow-[0_0_20px_rgba(197,160,89,0.3)] transition-colors flex items-center justify-center gap-2 rounded-md text-center">
-                    O Mentor
-                </a>
+            <!-- CAMADA DA IMAGEM: Alinhada à direita e colada na base (Fora do container de texto) -->
+            <div
+                class="absolute bottom-0 right-0 w-full  h-[80%] md:h-full flex items-end justify-end pointer-events-none">
+                <img alt="Márcio Conceição"
+                    class="max-w-full h-full object-contain object-bottom md:object-right-bottom bg-[#030405]"
+                    src="./assets/marcio2.jpg" />
+                <!-- Máscara de degradê para sumir com as bordas da foto no fundo preto -->
+                <!-- Máscara de degradê adaptada para sumir com as bordas da foto sem apagar o Márcio -->
+                <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#030405] via-[#030405] "></div>
+
             </div>
-        </div>
 
-    </div>
-</section>
+            <!-- CONTAINER PRINCIPAL: Mantém seus textos e botões perfeitamente alinhados -->
+            <div class="w-full  mx-auto px-8 md:px-20 z-20 pointer-events-none">
+
+                <!-- LADO ESQUERDO: Bloco de conteúdo (Texto e Botões) -->
+                <div class="w-full md:w-1/2 pointer-events-auto">
+                    <h1 class="font-display-lg text-[48px] md:text-[60px] leading-tight text-on-background">
+                        Por que sua vida parece um ciclo <span class="italic text-primary">sem fim?</span>
+                    </h1>
+                    <h2 class="font-headline-lg text-headline-lg text-primary text-2xl md:text-3xl mt-2">
+                        Descubra padrões ocultos.
+                    </h2>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mt-6">
+                        Maior especialista em <span class="text-primary font-bold">Análise Corporal
+                        </span>do mundo.
+                    </p>
+
+                    <!-- Botões de Ação -->
+                    <div class="pt-8 flex flex-col sm:flex-row gap-4">
+                        <a href="#produtos"
+                            class="bg-primary-container text-on-primary-container px-10 py-4 font-label-caps text-label-caps hover:shadow-[0_0_20px_rgba(197,160,89,0.3)] transition-all rounded-lg text-center">
+                            Conhecer possibilidades
+                        </a>
+                        <a href="./marcio.html"
+                            class="border border-primary text-primary px-10 py-4 font-label-caps text-label-caps hover:shadow-[0_0_20px_rgba(197,160,89,0.3)] transition-colors flex items-center justify-center gap-2 rounded-lg text-center">
+                            O Mentor
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
 
         <!-- Digital Products Carousel Section -->
@@ -237,12 +285,15 @@
                 <div class="flex justify-center gap-gutter overflow-x-auto pb-12 carousel-scrollbar snap-x snap-mandatory"
                     id="carousel">
                     <!-- Compatíveis -->
-                    <div class="flex-shrink-0 w-[320px] md:w-[420px] snap-start group">
-                        <div class="relative aspect-[4/5] overflow-hidden">
+                    <div class="flex-shrink-0 w-[320px] md:w-[420px] snap-start group animate-glow rounded-[24px]">
+                        <div class="relative aspect-[4/5] overflow-hidden rounded-[24px]">
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                data-alt="capa-compatíveis" src="./assets/backgroundmarcio.png" />
+                                data-alt="imagem-card1" src="./assets/backgroundmarcio.png" />
+
+                            <!-- Capa preta com opacidade -->
+                            <div class="absolute inset-0 bg-black/50"></div>
                             <div
-                                class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80">
+                                class="absolute inset-0 bg-black/30 group-hover:bg-black/0 transition-colors duration-300">
                             </div>
                             <div class="absolute bottom-0 left-0 p-8 w-full">
                                 <h4 class="font-headline-md text-headline-md text-primary mb-2">Compatíveis</h4>
@@ -250,52 +301,61 @@
                                     transformar o seu relacionamento ou te dar clareza da melhor decisão.
                                 </p>
                                 <a href="./compativeis.html"
-                                    class="inline-flex justify-center w-full border border-primary text-primary py-3 font-label-caps text-label-caps hover:bg-primary text-on-primary transition-all">
+                                    class="inline-flex justify-center w-full border border-primary text-primary py-3 font-label-caps text-label-caps hover:bg-primary text-on-primary transition-all rounded-lg">
                                     Saiba Mais
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <!-- Product 2 -->
-                    <div class="flex-shrink-0 w-[320px] md:w-[420px] snap-start group">
-                        <div class="relative aspect-[4/5] overflow-hidden">
+                    <!-- Análise Corporal -->
+                    <div class="flex-shrink-0 w-[320px] md:w-[420px] snap-start group animate-glow rounded-[24px]">
+                        <div class="relative aspect-[4/5] overflow-hidden rounded-[24px]">
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                data-alt="A striking portrait of a man in deep reflection, captured with Rembrandt lighting that creates dramatic highlights and shadows. The background is a solid charcoal black, and the focus is sharp on his thoughtful expression. The overall style is premium and cinematic, reflecting a sense of mastery and psychological depth. Warm gold tones subtly accent the highlights of the skin."
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-4nF2HD4xZ5_86mOMa0IEuer-MYbH_3q5qSyrFt85X3e9nzmU9JtIeY30-D47rNdVNUXq8B-Z7-ODXPTwOl7gDSSRndN_gU8QTb71aE5E86Sg978EY1ddMJgF_7CNVhbrmsRjt4bFPOE6Rd6xJb8jgEjplJMo_qrVpEjUZnwGnjhSpN-Lrvi84vja7oMF9PsDVtHwNg1gvw4iXZPaPxl9BCexkqbzLknm4vsqemAwj38oo_-_gy-g2KJ80C5y1cpLSyYWH7FUCgA" />
+                                data-alt="imagem-card2" src="./assets/marcioanalista2.jpg" />
+                            <!-- Capa preta com opacidade -->
+                            <div class="absolute inset-0 bg-black/50"></div>
+                            <div
+                                class="absolute inset-0 bg-black/30 group-hover:bg-black/0 transition-colors duration-300">
+                            </div>
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80">
                             </div>
                             <div class="absolute bottom-0 left-0 p-8 w-full">
-                                <h4 class="font-headline-md text-headline-md text-primary mb-2">A Jornada da
-                                    Transformação
+                                <h4 class="font-headline-md text-headline-md text-primary mb-2">Análise Corporal
                                 </h4>
-                                <p class="font-body-md text-on-surface-variant mb-6 line-clamp-2">Mentoria completa para
-                                    decifrar e reescrever seus padrões comportamentais.</p>
-                                <button
-                                    class="w-full border border-primary text-primary py-3 font-label-caps text-label-caps hover:bg-primary text-on-primary transition-all">
+                                <p class="font-body-md text-on-surface-variant mb-6">Autoconhecimento que
+                                    decodifica como a sua mente funciona através do formato do seu corpo.</p>
+                                <a href="https://form.respondi.app/te6XTkpU?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGn15pxr-DemrUG0-3WUIwuIkywh4VT1eAh2RBnivwXdSsh6lmiZn5u4R0n8lo_aem_87rxeIIC3Ma9VyP72J431g&utm_id=97760_v0_s00_e0_tv3"
+                                    target="_blank"
+                                    class="inline-flex justify-center w-full border border-primary text-primary py-3 font-label-caps text-label-caps hover:bg-primary text-on-primary transition-all rounded-lg">
                                     Saiba Mais
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <!-- Product 3 -->
-                    <div class="flex-shrink-0 w-[320px] md:w-[420px] snap-start group">
-                        <div class="relative aspect-[4/5] overflow-hidden">
+                    <!-- Como resolver a crise no casamento -->
+                    <div class="flex-shrink-0 w-[320px] md:w-[420px] snap-start group animate-glow rounded-[24px]">
+                        <div class="relative aspect-[4/5] overflow-hidden rounded-[24px]">
                             <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                data-alt="A minimalist architectural shot of a sharp, clean staircase ascending into a single ray of golden light against a dark, textured wall. The composition is highly geometric and authoritative, symbolizing emotional intelligence and clarity. The color palette is strictly obsidian and bronze, creating a quiet luxury aesthetic that feels exclusive and transformative."
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJQ2P9ca_I3Pz9mZEF_qi98cfEXYdkz6TtRm0qRVo3igGIATLWatZpUnHo6ehmcoSjbhyQog7wpAwCLgn2nykk-R9HtpCB6jUvZk9d_VAqiSvmzjAw9UcvOcUekrz55N7dZz3ll_H_GKhC86owSVlyhaRNSnqVL9TdKiZUiT4j7zKHUojNJWt-KCFsNnQa2_J5p0YlrsAs3j1EJE7DUV5GH_OFNOnyr2DJk-KcsItF7m7rVWOJiYNImf0eNsc08tgMr3o_MBRKo4Y" />
+                                data-alt="imagem-card3" src="./assets/marciocasamento3.jpg" />
+                            <!-- Capa preta com opacidade -->
+                            <div class="absolute inset-0 bg-black/50"></div>
+                            <div
+                                class="absolute inset-0 bg-black/30 group-hover:bg-black/0 transition-colors duration-300">
+                            </div>
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80">
                             </div>
                             <div class="absolute bottom-0 left-0 p-8 w-full">
-                                <h4 class="font-headline-md text-headline-md text-primary mb-2">Mente Blindada</h4>
-                                <p class="font-body-md text-on-surface-variant mb-6 line-clamp-2">Desenvolva
-                                    inteligência
-                                    emocional inabalável e rompa ciclos de autossabotagem.</p>
-                                <button
-                                    class="w-full border border-primary text-primary py-3 font-label-caps text-label-caps hover:bg-primary text-on-primary transition-all">
+                                <h4 class="font-headline-md text-headline-md text-primary mb-2">Como resolver a crise do
+                                    seu casamento</h4>
+                                <p class="font-body-md text-on-surface-variant mb-6">
+                                    Em 70 minutos, você vai ver o padrão invisível que está destruindo o seu
+                                    relacionamento e vai começar a sair dele ainda hoje.</p>
+                                <a href="https://emccompativeis.com.br/aula/" target="_blank"
+                                    class="inline-flex justify-center w-full border border-primary text-primary py-3 font-label-caps text-label-caps hover:bg-primary text-on-primary transition-all rounded-lg">
                                     Saiba Mais
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -343,9 +403,9 @@
             <a class="text-on-surface-variant hover:text-primary  hover:underline hover:decoration-primary hover:underline-offset-4 transition-all"
                 href="./index.html">Home</a>
             <a class="text-on-surface-variant hover:text-primary hover:underline hover:decoration-primary hover:underline-offset-4 transition-all"
-                href="./index.html#programa">Compatíveis</a>
+                href="./compativeis.html">Compatíveis</a>
             <a class="text-on-surface-variant hover:text-primary hover:underline hover:decoration-primary hover:underline-offset-4 transition-all"
-                href="#mentor">Mentor</a>
+                href="./marcio.html">Mentor</a>
         </div>
         <div class="flex flex-col gap-4">
             <h4 class="font-label-caps text-white uppercase mb-2">Legal</h4>

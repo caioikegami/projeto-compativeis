@@ -7,7 +7,8 @@
     <title>Compatíveis - Transforme seu relacionamento</title>
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Manrope:wght@200..800&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Manrope:wght@200..800&amp;display=swap">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
@@ -140,6 +141,11 @@
             font-size: 30px;
             box-shadow: 1px 1px 2px #888;
             z-index: 1000;
+        }
+
+        .btn-whatsapp:hover {
+            transform: scale(1.1);
+            /* Dá um leve aumento no tamanho */
         }
 
         .fa-whatsapp {
@@ -539,6 +545,11 @@
                 font-size: 24px !important;
             }
 
+            .btn-whatsapp:hover {
+                transform: scale(1.1);
+                /* Dá um leve aumento no tamanho */
+            }
+
             /* ===== ÍCONES ===== */
             .text-5xl {
                 font-size: 40px !important;
@@ -931,7 +942,8 @@
             </div>
 
             <!-- Botão CTA Desktop -->
-            <a href="https://form.respondi.app/eW9PPMu8" target="_blank"
+            <a href="https://form.respondi.app/e1z0xrgX?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnMloK5JPsUakONzyli5lriqA8kPEkzZWhmU2uYI6tqC7JLgv_rdkz7mz3MkI_aem_ZmFrZWR1bW15MTZieXRlcw&utm_id=97760_v0_s00_e0_tv3"
+                target="_blank"
                 class="hidden md:block bg-primary-container font-bold text-on-primary-container px-6 py-3 font-label-caps uppercase bronze-glow transition-all text-xs rounded-md">
                 INICIAR TRANSFORMAÇÃO
             </a>
@@ -1003,8 +1015,9 @@
 
     <!-- Hero Section -->
 
-    <a class="btn-whatsapp" href="https://wa.me/5512997621990" target="_blank">
-        <i class="fa fa-whatsapp"></i>
+    <!-- Botão Whatsapp Fixo -->
+    <a class="btn-whatsapp" href="https://wa.me/5512997621990" target="_blank" rel="noopener noreferrer">
+        <img src="./assets/whatsapp.png" alt="Contato WhatsApp">
     </a>
 
     <a href="#trilhas" class="btn-voltar">
