@@ -8,14 +8,8 @@
     <title>Márcio Conceição | Analista Corporal e Comportamental</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Manrope:wght@200..800&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -27,22 +21,22 @@
                         "surface-bright": "#3a3939",
                         "secondary-container": "#474746",
                         "on-secondary-fixed-variant": "#474746",
-                        "inverse-surface": "#e5e2e1",
-                        "secondary": "#c8c6c5",
+                        "inverse-surface": "#ADADAD",
+                        "secondary": "#ADADAD",
                         "tertiary-fixed-dim": "#d7c3b0",
-                        "primary-fixed": "#ffdea5",
+                        "primary-fixed": "#E8D09A",
                         "on-error": "#690005",
-                        "secondary-fixed-dim": "#c8c6c5",
+                        "secondary-fixed-dim": "#ADADAD",
                         "on-primary-fixed": "#261900",
-                        "tertiary-fixed": "#f4dfcb",
-                        "surface-tint": "#e9c176",
+                        "tertiary-fixed": "#E8D09A",
+                        "surface-tint": "#D4AF37",
                         "on-tertiary-fixed-variant": "#524436",
-                        "on-background": "#e5e2e1",
+                        "on-background": "#FFFFFF",
                         "tertiary-container": "#b4a28f",
                         "surface-container-low": "#1c1b1b",
                         "on-secondary-fixed": "#1c1b1b",
                         "error-container": "#93000a",
-                        "primary-fixed-dim": "#e9c176",
+                        "primary-fixed-dim": "#D4AF37",
                         "tertiary": "#d7c3b0",
                         "surface-dim": "#131313",
                         "surface": "#131313",
@@ -53,20 +47,20 @@
                         "on-primary-fixed-variant": "#5d4201",
                         "outline-variant": "#4e4639",
                         "inverse-on-surface": "#313030",
-                        "on-surface": "#e5e2e1",
+                        "on-surface": "#FFFFFF",
                         "surface-variant": "#353534",
                         "surface-container": "#201f1f",
                         "on-primary": "#412d00",
-                        "primary": "#e9c176",
+                        "primary": "#E8D09A",
                         "on-tertiary-container": "#45392a",
                         "on-tertiary-fixed": "#241a0d",
-                        "primary-container": "#c5a059",
-                        "secondary-fixed": "#e5e2e1",
+                        "primary-container": "#D4AF37",
+                        "secondary-fixed": "#FFFFFF",
                         "on-error-container": "#ffdad6",
                         "inverse-primary": "#775a19",
                         "surface-container-lowest": "#0e0e0e",
                         "on-primary-container": "#4e3700",
-                        "on-secondary-container": "#b7b5b4",
+                        "on-secondary-container": "#ADADAD",
                         "error": "#ffb4ab",
                         "background": "#131313"
                     },
@@ -83,13 +77,15 @@
                         "container-padding": "24px"
                     },
                     "fontFamily": {
-                        "headline-lg-mobile": ["Bodoni Moda"],
-                        "display-lg": ["Bodoni Moda"],
-                        "label-caps": ["Manrope"],
-                        "body-md": ["Manrope"],
-                        "body-lg": ["Manrope"],
-                        "headline-lg": ["Bodoni Moda"],
-                        "headline-md": ["Bodoni Moda"]
+                        "headline-lg-mobile": ["Cormorant Garamond", "serif"],
+                        "display-lg": ["Cormorant Garamond", "serif"],
+                        "label-caps": ["Montserrat", "sans-serif"],
+                        'eyebrow': ['Montserrat', 'sans-serif'],
+                        'body-md': ['Inter', 'sans-serif'],
+                        'body-lg': ['Inter', 'sans-serif'],
+                        'body-sm': ['Inter', 'sans-serif'],
+                        "headline-lg": ["Cormorant Garamond", "serif"],
+                        "headline-md": ["Cormorant Garamond", "serif"]
                     },
                     "fontSize": {
                         "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
@@ -124,7 +120,7 @@
         }
 
         .carousel-scrollbar::-webkit-scrollbar-thumb {
-            background: #c5a059;
+            background: #D4AF37;
         }
 
         .glass-card {
@@ -163,16 +159,38 @@
 
             0%,
             100% {
-                box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+                box-shadow: 0 0 20px rgba(232, 208, 154, 1.0);
             }
 
             50% {
-                box-shadow: 0 0 50px rgba(255, 215, 0, 0.7);
+                box-shadow: 0 0 50px rgba(212, 175, 55, 1.0);
             }
         }
 
         .animate-glow {
             animation: glow-pulse 2s ease-in-out infinite;
+        }
+
+        /* Animação de entrada do modal */
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fade-in 0.3s ease-out;
+        }
+
+        /* Prevenir scroll quando modal aberto */
+        body.modal-open {
+            overflow: hidden;
         }
     </style>
 </head>
@@ -227,17 +245,20 @@
 
 
         <section
-            class="relative w-full min-h-screen bg-[#030405] flex items-center justify-center overflow-hidden shadow-[0_0_20px_rgba(3,4,5,0.3)]">
+            class="relative w-full min-h-screen bg-[#030405] flex items-center justify-center overflow-hidden">
 
             <!-- CAMADA DA IMAGEM: Alinhada à direita e colada na base (Fora do container de texto) -->
             <div
                 class="absolute bottom-0 right-0 w-full  h-[80%] md:h-full flex items-end justify-end pointer-events-none">
                 <img alt="Márcio Conceição"
-                    class="max-w-full h-full object-contain object-bottom md:object-right-bottom bg-[#030405]"
+                    class="max-w-full h-full object-contain object-bottom md:object-right-bottom"
                     src="./assets/marcio2.jpg" />
                 <!-- Máscara de degradê para sumir com as bordas da foto no fundo preto -->
-                <!-- Máscara de degradê adaptada para sumir com as bordas da foto sem apagar o Márcio -->
-                <div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#030405] via-[#030405] "></div>
+        
+        <!-- Gradiente lateral para desktop -->
+        <div class="hidden md:block absolute inset-0 bg-[linear-gradient(to_right,#030405_0%,#030405_15%,rgba(3,4,5,0.8)_30%,rgba(3,4,5,0.5)_50%,rgba(3,4,5,0.2)_70%,transparent_90%)]"></div>
+    </div>
+
 
             </div>
 
@@ -261,12 +282,12 @@
                     <div class="pt-8 flex flex-col sm:flex-row gap-4">
                         <a href="#produtos"
                             class="bg-primary-container text-on-primary-container px-10 py-4 font-label-caps text-label-caps hover:shadow-[0_0_20px_rgba(197,160,89,0.3)] transition-all rounded-lg text-center">
-                            Conhecer possibilidades
+                            COMECE POR AQUI
                         </a>
-                        <a href="./marcio.html"
+                        <button id="btnAbrirModal"
                             class="border border-primary text-primary px-10 py-4 font-label-caps text-label-caps hover:shadow-[0_0_20px_rgba(197,160,89,0.3)] transition-colors flex items-center justify-center gap-2 rounded-lg text-center">
-                            O Mentor
-                        </a>
+                            GARANTIR MINHA ANÁLISE INDIVIDUAL
+                        </button>
                     </div>
                 </div>
 
@@ -453,7 +474,186 @@
     </div>
     </footer>
 
+    <!-- Modal para Captura de dados -->
+    <div id="modalAnalise"
+        class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">
+        <div class="bg-zinc-900 rounded-2xl max-w-md w-full p-8 relative animate-fade-in">
+
+            <!-- Botão Fechar -->
+            <button id="btnFecharModal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl">
+                &times;
+            </button>
+
+            <!-- Título -->
+            <h2 class="text-2xl font-label-caps text-primary mb-2">
+                Garanta sua análise individual
+            </h2>
+            <p class="text-gray-400 mb-6">
+                Preencha os dados abaixo e descubra seus padrões ocultos.
+            </p>
+
+            <!-- Formulário -->
+            <form id="formAnalise" class="space-y-4">
+
+                <!-- Nome -->
+                <div>
+                    <label for="nome" class="block text-sm font-medium text-gray-300 mb-2">
+                        Nome completo
+                    </label>
+                    <input type="text" id="nome" name="nome" required
+                        class="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-yellow-600 transition"
+                        placeholder="Seu nome">
+                </div>
+
+                <!-- E-mail -->
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
+                        E-mail
+                    </label>
+                    <input type="email" id="email" name="email" required
+                        class="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-yellow-600 transition"
+                        placeholder="seu@email.com">
+                </div>
+
+                <!-- WhatsApp -->
+                <div>
+                    <label for="whatsapp" class="block text-sm font-medium text-gray-300 mb-2">
+                        WhatsApp
+                    </label>
+                    <input type="tel" id="whatsapp" name="whatsapp" required
+                        class="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-yellow-600 transition"
+                        placeholder="(00) 00000-0000">
+                </div>
+
+                <!-- Botão Enviar -->
+                <button type="submit"
+                    class="w-full py-3 bg-[#D4AF37] text-black font-bold rounded-lg hover:bg-[#E8D09A] transition mt-6">
+                    GARANTIR MINHA ANÁLISE!
+                </button>
+
+                <p class="text-xs text-gray-500 mt-4">
+                    "Respeitamos a sua privacidade. Seus dados são tratados com segurança e transparência, conforme a
+                    Lei
+                    Geral de Proteção de Dados (LGPD). Para saber como utilizamos suas informações, acesse nossa
+                    Política de Privacidade."</p>
+
+            </form>
+
+            <!-- Mensagem de sucesso (inicialmente oculta) -->
+            <div id="mensagemSucesso"
+                class="hidden mt-4 p-4 bg-green-900 border border-green-600 rounded-lg text-green-200 text-center">
+                ✓ Análise solicitada com sucesso! Entraremos em contato em breve.
+            </div>
+
+        </div>
+    </div>
+
     <script>
+        // Script para controle do modal e envio do formulário para Formspree
+        // Elementos
+        const btnAbrirModal = document.getElementById('btnAbrirModal');
+        const btnFecharModal = document.getElementById('btnFecharModal');
+        const modalAnalise = document.getElementById('modalAnalise');
+        const formAnalise = document.getElementById('formAnalise');
+        const btnEnviar = document.getElementById('btnEnviar');
+        const mensagemSucesso = document.getElementById('mensagemSucesso');
+        const mensagemErro = document.getElementById('mensagemErro');
+
+        // URL do Formspree
+        const FORMSPREE_URL = 'https://formspree.io/f/mrevgpaz';
+
+        // Abrir modal
+        btnAbrirModal.addEventListener('click', () => {
+            modalAnalise.classList.remove('hidden');
+            document.body.classList.add('modal-open');
+        });
+
+        // Fechar modal
+        function fecharModal() {
+            modalAnalise.classList.add('hidden');
+            document.body.classList.remove('modal-open');
+            formAnalise.reset();
+            mensagemSucesso.classList.add('hidden');
+            mensagemErro.classList.add('hidden');
+        }
+
+        btnFecharModal.addEventListener('click', fecharModal);
+
+        // Fechar ao clicar fora do modal
+        modalAnalise.addEventListener('click', (e) => {
+            if (e.target === modalAnalise) {
+                fecharModal();
+            }
+        });
+
+        // Fechar com tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modalAnalise.classList.contains('hidden')) {
+                fecharModal();
+            }
+        });
+
+        // Máscara para WhatsApp
+        const whatsappInput = document.getElementById('whatsapp');
+        whatsappInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+
+            if (value.length <= 11) {
+                value = value.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
+            }
+
+            e.target.value = value;
+        });
+
+        // Enviar formulário para Formspree
+        formAnalise.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Desabilitar botão durante envio
+            btnEnviar.disabled = true;
+            btnEnviar.textContent = 'ENVIANDO...';
+
+            // Esconder mensagens anteriores
+            mensagemSucesso.classList.add('hidden');
+            mensagemErro.classList.add('hidden');
+
+            // Preparar dados do formulário
+            const formData = new FormData(formAnalise);
+
+            try {
+                const response = await fetch(FORMSPREE_URL, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Sucesso!
+                    mensagemSucesso.classList.remove('hidden');
+                    formAnalise.reset();
+
+                    // Fechar modal após 2 segundos
+                    setTimeout(() => {
+                        fecharModal();
+                    }, 2000);
+
+                } else {
+                    // Erro na resposta
+                    mensagemErro.classList.remove('hidden');
+                }
+
+            } catch (error) {
+                // Erro de conexão
+                console.error('Erro:', error);
+                mensagemErro.classList.remove('hidden');
+            } finally {
+                // Reabilitar botão
+                btnEnviar.disabled = false;
+                btnEnviar.textContent = 'GARANTIR MINHA ANÁLISE';
+            }
+        });
         function scrollCarousel(direction) {
             const carousel = document.getElementById('carousel');
             const scrollAmount = 452; // card width + gap
