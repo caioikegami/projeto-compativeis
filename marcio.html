@@ -141,6 +141,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -151,15 +152,197 @@
             animation: fadeInUp 0.8s ease-out forwards;
         }
 
-        section > div {
+        section>div {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
 
-        section > div.visible {
+        section>div.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        /* From Uiverse.io by vinodjangid07 INSTAGRAM CSS */
+
+
+        .tooltip-container {
+            position: relative;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 17px;
+            border-radius: 10px;
+        }
+
+        .tooltip {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s;
+            border-radius: 15px;
+            box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+                inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+                5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+        }
+
+        .profile {
+            background: #2a2b2f;
+            border-radius: 10px 15px;
+            padding: 10px;
+            border: 1px solid #52382f;
+        }
+
+        .tooltip-container:hover .tooltip {
+            top: -150px;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .icon {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            position: relative;
+        }
+
+        .layer {
+            width: 55px;
+            height: 55px;
+            transition: transform 0.3s;
+        }
+
+        .icon:hover .layer {
+            transform: rotate(-35deg) skew(20deg);
+        }
+
+        .layer span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            border: 1px solid #fff;
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+
+        .layer span,
+        .text {
+            color: #e6683c;
+            border-color: #e6683c;
+        }
+
+        .icon:hover.layer span {
+            box-shadow: -1px 1px 3px #e6683c;
+        }
+
+        .icon .text {
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            opacity: 0;
+            font-weight: 500;
+            transform: translateX(-50%);
+            transition: bottom 0.3s ease, opacity 0.3s ease;
+        }
+
+        .icon:hover .text {
+            bottom: -35px;
+            opacity: 1;
+        }
+
+        .icon:hover .layer span:nth-child(1) {
+            opacity: 0.2;
+        }
+
+        .icon:hover .layer span:nth-child(2) {
+            opacity: 0.4;
+            transform: translate(5px, -5px);
+        }
+
+        .icon:hover .layer span:nth-child(3) {
+            opacity: 0.6;
+            transform: translate(10px, -10px);
+        }
+
+        .icon:hover .layer span:nth-child(4) {
+            opacity: 0.8;
+            transform: translate(15px, -15px);
+        }
+
+        .icon:hover .layer span:nth-child(5) {
+            opacity: 1;
+            transform: translate(20px, -20px);
+        }
+
+        .instagramSVG {
+            font-size: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: -webkit-linear-gradient(45deg,
+                    #f09433 0%,
+                    #e6683c 25%,
+                    #dc2743 50%,
+                    #cc2366 75%,
+                    #bc1888 100%);
+            background: linear-gradient(45deg,
+                    #f09433 0%,
+                    #e6683c 25%,
+                    #dc2743 50%,
+                    #cc2366 75%,
+                    #bc1888 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+        }
+
+        .user {
+            display: flex;
+            gap: 10px;
+        }
+
+        .img {
+            width: 72px;
+            height: 72px;
+            font-size: 25px;
+            font-weight: 700;
+            border: 1px solid #e6683c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .name {
+            font-size: 17px;
+            font-weight: 700;
+            color: #e6683c;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            color: #fff;
+        }
+
+        .about {
+            color: #ccc;
+            padding-top: 5px;
         }
     </style>
 </head>
@@ -177,11 +360,11 @@
             <!-- Logo (CENTRO NO MOBILE) -->
             <span
                 class="font-display-lg text-headline-md tracking-tighter text-primary dark:text-primary uppercase md:order-first">
-              Márcio Conceição
+                Márcio Conceição
             </span>
 
             <!-- Menu Desktop -->
-            <div class="hidden md:flex items-center gap-8">              
+            <div class="hidden md:flex items-center gap-8">
                 <a class="text-on-surface-variant hover:text-primary transition-colors duration-300"
                     href="./compativeis.html">Compatíveis</a>
                 <a href="./marcio.html" class="text-primary border-b-2 border-primary pb-1">O Mentor</a>
@@ -191,7 +374,7 @@
 
             <!-- Botão CTA Desktop -->
             <a href="https://form.respondi.app/eW9PPMu8" target="_blank"
-                class="hidden md:block bg-primary-container font-bold text-on-primary-container px-6 py-3 font-label-caps uppercase bronze-glow transition-all text-xs rounded-md">
+                class="hidden md:block bg-primary-container font-bold text-on-primary-container px-6 py-3 font-label-caps uppercase bronze-glow transition-all text-xs rounded-full">
                 INICIAR TRANSFORMAÇÃO
             </a>
 
@@ -217,30 +400,30 @@
 
         <!-- Links do Menu -->
         <div class="flex flex-col p-6 gap-2">
-            <a class="text-primary font-headline-md text-lg py-3 px-4 rounded-lg bg-primary/10 border-l-4 border-primary"
+            <a class="text-primary font-headline-md text-lg py-3 px-4 rounded-full bg-primary/10 border-l-4 border-primary"
                 href="./index.html" onclick="closeMobileMenu()">
                 Home
             </a>
-            <a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 font-body-lg text-base py-3 px-4 rounded-lg transition-all border-l-4 border-transparent hover:border-primary"
+            <a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 font-body-lg text-base py-3 px-4 rounded-full transition-all border-l-4 border-transparent hover:border-primary"
                 href="./index.html#programa" onclick="closeMobileMenu()">
                 O Programa
             </a>
-            <a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 font-body-lg text-base py-3 px-4 rounded-lg transition-all border-l-4 border-transparent hover:border-primary"
+            <a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 font-body-lg text-base py-3 px-4 rounded-full transition-all border-l-4 border-transparent hover:border-primary"
                 href="./marcio.html" onclick="closeMobileMenu()">
                 O Mentor
             </a>
-            <a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 font-body-lg text-base py-3 px-4 rounded-lg transition-all border-l-4 border-transparent hover:border-primary"
+            <a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 font-body-lg text-base py-3 px-4 rounded-full transition-all border-l-4 border-transparent hover:border-primary"
                 href="#depoimentos" onclick="closeMobileMenu()">
                 Depoimentos
             </a>
-            <a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 font-body-lg text-base py-3 px-4 rounded-lg transition-all border-l-4 border-transparent hover:border-primary"
+            <a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 font-body-lg text-base py-3 px-4 rounded-full transition-all border-l-4 border-transparent hover:border-primary"
                 href="#footer" onclick="closeMobileMenu()">
                 Contato
             </a>
 
             <!-- Botão CTA Mobile -->
             <a href="https://form.respondi.app/eW9PPMu8" target="_blank"
-                class="mt-6 bg-primary-container font-bold text-on-primary-container px-6 py-4 font-label-caps uppercase bronze-glow transition-all text-center text-xs rounded-md">
+                class="mt-6 bg-primary-container font-bold text-on-primary-container px-6 py-4 font-label-caps uppercase bronze-glow transition-all text-center text-xs rounded-full">
                 INICIAR TRANSFORMAÇÃO
             </a>
         </div>
@@ -307,13 +490,44 @@
                     diretamente no seu feed. Acompanhe os bastidores e insights diários sobre o corpo e a mente.</p>
 
 
-                <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+                <!-- From Uiverse.io by vinodjangid07 -->
                 <div class="flex justify-center">
-                    <script src="https://elfsightcdn.com/platform.js" async></script>
-                    <div class="elfsight-app-ce1b0cba-a992-4893-b058-89e8d672f04d" data-elfsight-app-lazy></div>
+                    <div class="tooltip-container">
+                        <div class="tooltip">
+                            <div class="profile">
+                                <div class="user">
+                                    <div class="img"><img src="./assets/marcio-avatar.png" alt="Márcio Conceição"></div>
+                                    <div class="details">
+                                        <div class="name">Márcio Conceição | Mentor de Relacionamentos</div>
+                                        <div class="username">@marcioaconceicao</div>
+                                    </div>
+                                </div>
+                                <div class="about">80,8 mil seguidores</div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <a class="icon" href="https://www.instagram.com/marcioaconceicao/" target="_blank" rel="noopener noreferrer">
+                                <div class="layer">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span class="instagramSVG">
+                                        <svg fill="white" class="svgIcon" viewBox="0 0 448 512" height="1.5em"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="text">Instagram</div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="flex justify-center mt-5">
+                <div class="flex justify-center mt-10">
                     <a href="#youtube" class="seta-proxima">
                         <span class="material-symbols-outlined text-5xl">arrow_circle_down</span>
                     </a>
@@ -331,7 +545,7 @@
                         <h2 class="font-headline-lg text-headline-lg">Se inscreva no Canal</h2>
                     </div>
                     <a href="https://www.youtube.com/@marcioaconceicao?sub_confirmation=1" target="_blank"
-                        class="rounded-md group flex items-center gap-3 bg-error-container/20 text-error px-6 py-3 border border-error/30 hover:bg-error-container/40 transition-all font-label-caps text-label-caps uppercase">
+                        class="rounded-full group flex items-center gap-3 bg-error-container/20 text-error px-6 py-3 border border-error/30 hover:bg-error-container/40 transition-all font-label-caps text-label-caps uppercase">
                         <span class="material-symbols-outlined"
                             style="font-variation-settings: 'FILL' 1;">play_circle</span>
                         Inscrever-se no YouTube
@@ -412,10 +626,10 @@
                     mentoria são limitadas. Garanta seu lugar na jornada de transformação definitiva.</p>
                 <div class="flex flex-col md:flex-row justify-center gap-6">
                     <a href="https://form.respondi.app/eW9PPMu8" target="_blank"
-                        class="rounded-md bg-primary text-on-primary px-10 py-5 font-label-caps text-label-caps uppercase bronze-glow transition-all">Agendar
+                        class="rounded-full bg-primary text-on-primary px-10 py-5 font-label-caps text-label-caps uppercase bronze-glow transition-all">Agendar
                         Sessão Estratégica</a>
                     <a href="https://wa.me/5512997621990" target="_blank"
-                        class="rounded-md border border-outline text-on-surface px-10 py-5 font-label-caps text-label-caps uppercase hover:border-primary transition-all">Falar
+                        class="rounded-full border border-outline text-on-surface px-10 py-5 font-label-caps text-label-caps uppercase hover:border-primary transition-all">Falar
                         com Suporte</a>
                 </div>
             </div>
@@ -483,8 +697,11 @@
         </div>
     </div>
     <div class="max-w-7xl mx-auto px-container-padding mt-24 p-8 border-t border-outline-variant/10 text-center">
-        <p class="text-on-surface-variant/40 text-xs uppercase font-label-caps tracking-widest">
-            © 2026 Márcio Conceição - Todos os direitos reservados.
+        <br class="text-on-surface-variant/40 text-xs uppercase font-label-caps tracking-widest">
+        © 2026 Márcio Conceição - Todos os direitos reservados - Desenvolvido por <a
+            href="https://caioikegami.github.io/caio-portfolio-react/" target="_blank"
+            class="text-primary hover:underline hover:decoration-primary hover:underline-offset-4 transition-all">Caio
+            Ferreira</a>
         </p>
     </div>
     </footer>
